@@ -63,7 +63,7 @@ $("#btnblog").click(function(){
      
 
      
-      <a class="navbar-brand" href="http://yeahyangliu.github.io">
+      <a class="navbar-brand" href="http://localhost:4000">
         <img src="../assets/media/alex.png" class="img-circle" style="height:35px;width:35px"/>
         Alex Yang
       </a>
@@ -73,9 +73,9 @@ $("#btnblog").click(function(){
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbarHeaderCollapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="http://yeahyangliu.github.io">Home</a></li>
-        <li><a href="http://yeahyangliu.github.io/categories.html">Categories</a></li>
-        <li><a href="http://yeahyangliu.github.io/tags.html">Tags</a></li>
+        <li class="active"><a href="http://localhost:4000">Home</a></li>
+        <li><a href="http://localhost:4000/categories.html">Categories</a></li>
+        <li><a href="http://localhost:4000/tags.html">Tags</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
 
@@ -87,9 +87,9 @@ $("#btnblog").click(function(){
      <i class="fa fa-bars"></i>
    </button>
    <ul class="dropdown-menu pull-right" role="menu">
-     <li><a href="http://yeahyangliu.github.io"><i class="fa fa-home"></i> Home</a></li>
-     <li><a href="http://yeahyangliu.github.io/categories.html"><i class="fa fa-folder"></i> Categories</a></li>
-     <li><a href="http://yeahyangliu.github.io/tags.html"><i class="fa fa-tags"></i> Tags</a></li>
+     <li><a href="http://localhost:4000"><i class="fa fa-home"></i> Home</a></li>
+     <li><a href="http://localhost:4000/categories.html"><i class="fa fa-folder"></i> Categories</a></li>
+     <li><a href="http://localhost:4000/tags.html"><i class="fa fa-tags"></i> Tags</a></li>
      <li class="divider"></li>
      <li><a href="#"><i class="fa fa-arrow-up"></i> Top of Page</a></li>
    </ul>
@@ -98,12 +98,12 @@ $("#btnblog").click(function(){
 <div class="col-sm-4 sidebar hidden-xs" id="sidebar">
 		<! -- sidebar.html -->
 <header class="sidebar-header" role="banner">
-	<a href="http://yeahyangliu.github.io">
+	<a href="http://localhost:4000">
 		<img src="../assets/media/alex.png" class="img-circle" style="border-radius: 50%;
 border: 3px solid #FFF; height:150px;width:150px" />
 	</a>
 	<h3 class="title">
-        <a href="http://yeahyangliu.github.io">Alex Yang</a>
+        <a href="http://localhost:4000">Alex Yang</a>
          <p style="font-size:20px;">Developer</p>
     </h3>
 
@@ -126,7 +126,7 @@ border: 3px solid #FFF; height:150px;width:150px" />
         <i class="fa fa-facebook"></i>
       </a>
       
-       <a type="button"  class="social1" id="btnblog" href="http://yeahyangliu.github.io/#blog">
+       <a type="button"  class="social1" id="btnblog" href="http://localhost:4000/#blog">
         <i class="fa" style="letter-spacing:0; position:relative; top:-5px; left: -5px; font-size:20px;font-family:arial,sans-serif">Blog</i>
       </a>
       </h3>
@@ -158,10 +158,16 @@ border: 3px solid #FFF; height:150px;width:150px" />
    </span>
     <div class="article_body" id="article_body">
     <p><br />
-<br />
     在web项目中Javascript是一门必须要掌握的动态语言，基于Javascript的框架大多离不开不了最基础的Javascript的用法和原理。本文主要是总结一下Javascript中那万恶的this关键字。
 <br />
-    开门见山，抛出一个观点：“Javascript中this永远是指向调用它的对象”。下面我会举3个最有代表性的例子来验证我的这个观点。</p>
+开门见山，抛出一个观点：</p>
+
+<blockquote>
+  <p>“Javascript中this永远是指向调用它的对象”。</p>
+
+</blockquote>
+
+<p>下面我会举3个最有代表性的例子来验证我的这个观点。</p>
 
 <h1 id="section">例一 对象方法调用</h1>
 
@@ -239,8 +245,8 @@ border: 3px solid #FFF; height:150px;width:150px" />
       
       
        
-        <li><a href="http://yeahyangliu.github.io/categories.html#前端-ref">
-          前端 <span>(1)</span>
+        <li><a href="http://localhost:4000/categories.html#前端-ref">
+          前端 <span>(2)</span>
           
         </a></li>
       
@@ -255,8 +261,8 @@ border: 3px solid #FFF; height:150px;width:150px" />
       
        
         <li>
-          <a href="http://yeahyangliu.github.io/tags.html#JavaScript-ref">
-          JavaScript <span>(1)</span>
+          <a href="http://localhost:4000/tags.html#JavaScript-ref">
+          JavaScript <span>(2)</span>
           
           </a>
         </li>
@@ -302,7 +308,7 @@ border: 3px solid #FFF; height:150px;width:150px" />
       <li class="previous disabled"><a>&larr; Previous</a></li>
       
       
-      <li class="next disabled"><a>Next &rarr;</a>
+      <li class="next"><a href="http://localhost:4000/%E7%8E%A9%E8%BD%AC%20JavaScript%20Callback%E5%87%BD%E6%95%B0" title="玩转JavaScript Callback函数">Next &rarr;</a></li>
       
     </ul>
 

@@ -2,16 +2,19 @@
 layout: post
 title: 玩转JavaScript this用法
 description: 剖析JavaScript原理，以及this应该避免的坑
-image: /assets/media/Lamp.jpg
 categories: [前端]
 tags: [JavaScript]
 
 ---
 <br/>
-<br/>
     在web项目中Javascript是一门必须要掌握的动态语言，基于Javascript的框架大多离不开不了最基础的Javascript的用法和原理。本文主要是总结一下Javascript中那万恶的this关键字。
 <br/>
-    开门见山，抛出一个观点：“Javascript中this永远是指向调用它的对象”。下面我会举3个最有代表性的例子来验证我的这个观点。
+开门见山，抛出一个观点：
+
+>“Javascript中this永远是指向调用它的对象”。
+>
+
+下面我会举3个最有代表性的例子来验证我的这个观点。
 
 # 例一 对象方法调用
 

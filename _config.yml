@@ -14,7 +14,7 @@ paginate_path: "page/:num"
 categories_path : categories.html
 tags_path : tags.html
 
-BASE_PATH : http://yeahyangliu.github.io
+BASE_PATH : http://localhost:4000
 
 
 title : Alex Yang
