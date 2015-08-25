@@ -21,11 +21,14 @@
 
 <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-1.3.2.min.js"></script>
 	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.js"></script>
-	
+
 <script type="text/javascript">
 $(document).ready(function(){
+
+$("#sidebar").addClass("img-" +Math.round((Math.random()*2 +1)) );
+
 if(window.location.href=="http://yeahyangliu.github.io/")
 {
 $("#sidebar").css({width:'100%'});
@@ -34,7 +37,7 @@ $("#btnblog").click(function(){
 });
 }
 });
-	
+
 </script>
 	</head>
 <body>
@@ -64,15 +67,15 @@ $("#btnblog").click(function(){
         <i class="fa fa-envelope"></i>
       </a>
       {% endif %}
-     
 
-     
+
+
       <a class="navbar-brand" href="{{ site.BASE_PATH }}">
         <img src="{{site.author.uno-dbyll}}" class="img-circle" style="height:35px;width:35px"/>
         {{ site.title }}
       </a>
     </div>
-    
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbarHeaderCollapse">
@@ -126,6 +129,6 @@ $("#btnblog").click(function(){
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
-    
+
 </body>
 </html>

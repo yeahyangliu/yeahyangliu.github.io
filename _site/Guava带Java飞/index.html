@@ -21,11 +21,14 @@
 
 <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-1.3.2.min.js"></script>
 	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.js"></script>
-	
+
 <script type="text/javascript">
 $(document).ready(function(){
+
+$("#sidebar").addClass("img-" +Math.round((Math.random()*2 +1)) );
+
 if(window.location.href=="http://yeahyangliu.github.io/")
 {
 $("#sidebar").css({width:'100%'});
@@ -34,7 +37,7 @@ $("#btnblog").click(function(){
 });
 }
 });
-	
+
 </script>
 	</head>
 <body>
@@ -60,22 +63,22 @@ $("#btnblog").click(function(){
         <i class="fa fa-envelope"></i>
       </a>
       
-     
 
-     
-      <a class="navbar-brand" href="http://localhost:4000">
+
+
+      <a class="navbar-brand" href="http://yeahyangliu.github.io">
         <img src="../assets/media/alex.png" class="img-circle" style="height:35px;width:35px"/>
         Alex Yang
       </a>
     </div>
-    
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbarHeaderCollapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="http://localhost:4000">Home</a></li>
-        <li><a href="http://localhost:4000/categories.html">Categories</a></li>
-        <li><a href="http://localhost:4000/tags.html">Tags</a></li>
+        <li class="active"><a href="http://yeahyangliu.github.io">Home</a></li>
+        <li><a href="http://yeahyangliu.github.io/categories.html">Categories</a></li>
+        <li><a href="http://yeahyangliu.github.io/tags.html">Tags</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
 
@@ -87,9 +90,9 @@ $("#btnblog").click(function(){
      <i class="fa fa-bars"></i>
    </button>
    <ul class="dropdown-menu pull-right" role="menu">
-     <li><a href="http://localhost:4000"><i class="fa fa-home"></i> Home</a></li>
-     <li><a href="http://localhost:4000/categories.html"><i class="fa fa-folder"></i> Categories</a></li>
-     <li><a href="http://localhost:4000/tags.html"><i class="fa fa-tags"></i> Tags</a></li>
+     <li><a href="http://yeahyangliu.github.io"><i class="fa fa-home"></i> Home</a></li>
+     <li><a href="http://yeahyangliu.github.io/categories.html"><i class="fa fa-folder"></i> Categories</a></li>
+     <li><a href="http://yeahyangliu.github.io/tags.html"><i class="fa fa-tags"></i> Tags</a></li>
      <li class="divider"></li>
      <li><a href="#"><i class="fa fa-arrow-up"></i> Top of Page</a></li>
    </ul>
@@ -98,12 +101,12 @@ $("#btnblog").click(function(){
 <div class="col-sm-4 sidebar hidden-xs" id="sidebar">
 		<! -- sidebar.html -->
 <header class="sidebar-header" role="banner">
-	<a href="http://localhost:4000">
+	<a href="http://yeahyangliu.github.io">
 		<img src="../assets/media/alex.png" class="img-circle" style="border-radius: 50%;
 border: 3px solid #FFF; height:150px;width:150px" />
 	</a>
 	<h3 class="title">
-        <a href="http://localhost:4000">Alex Yang</a>
+        <a href="http://yeahyangliu.github.io">Alex Yang</a>
          <p style="font-size:20px;">Developer</p>
     </h3>
 
@@ -126,7 +129,7 @@ border: 3px solid #FFF; height:150px;width:150px" />
         <i class="fa fa-facebook"></i>
       </a>
       
-       <a type="button"  class="social1" id="btnblog" href="http://localhost:4000/#blog">
+       <a type="button"  class="social1" id="btnblog" href="http://yeahyangliu.github.io/#blog">
         <i class="fa" style="letter-spacing:0; position:relative; top:-5px; left: -5px; font-size:20px;font-family:arial,sans-serif">Blog</i>
       </a>
       </h3>
@@ -267,7 +270,7 @@ border: 3px solid #FFF; height:150px;width:150px" />
       
       
        
-        <li><a href="http://localhost:4000/categories.html#服务器端-ref">
+        <li><a href="http://yeahyangliu.github.io/categories.html#服务器端-ref">
           服务器端 <span>(2)</span>
           
         </a></li>
@@ -283,7 +286,7 @@ border: 3px solid #FFF; height:150px;width:150px" />
       
        
         <li>
-          <a href="http://localhost:4000/tags.html#Java-ref">
+          <a href="http://yeahyangliu.github.io/tags.html#Java-ref">
           Java <span>(2)</span>
           
           </a>
@@ -327,10 +330,10 @@ border: 3px solid #FFF; height:150px;width:150px" />
 
     <ul class="pager">
       
-      <li class="previous"><a href="http://localhost:4000/javascript-module-pattern" title="玩转JavaScript module pattern精髓">&larr; Previous</a></li>
+      <li class="previous"><a href="http://yeahyangliu.github.io/javascript-module-pattern" title="玩转JavaScript module pattern精髓">&larr; Previous</a></li>
       
       
-      <li class="next"><a href="http://localhost:4000/%E7%8E%A9%E8%BD%AC%20JavaScript%20this%E6%8C%87%E9%92%88" title="玩转JavaScript this用法">Next &rarr;</a></li>
+      <li class="next"><a href="http://yeahyangliu.github.io/%E7%8E%A9%E8%BD%AC%20JavaScript%20this%E6%8C%87%E9%92%88" title="玩转JavaScript this用法">Next &rarr;</a></li>
       
     </ul>
 
@@ -376,6 +379,6 @@ border: 3px solid #FFF; height:150px;width:150px" />
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
-    
+
 </body>
 </html>
