@@ -2,10 +2,10 @@
 <html>
 	<head>
 
-		<title>Easiest Way To Install Lamp On Ubuntu</title>
+		<title>Lamp Installation on Arch</title>
 
 	
-	<meta name="description" content="original post at WOWMORON">
+	<meta name="description" content="Linux, Apache, MySQL/MariaDB, PHP. In short LAMP, a complete Open Source solution for web-developer.">
 	
 
 	<meta name="author" content="Ankan Biswas">
@@ -152,7 +152,7 @@ border: 3px solid #FFF; height:150px;width:150px" />
 <div class="col-sm-8 col-sm-offset-4" id="container">
   
 <div class="page-header">
-  <h1>Easiest Way To Install Lamp On Ubuntu </h1>
+  <h1>Lamp Installation on Arch </h1>
 </div>
   
 <article>
@@ -161,46 +161,61 @@ border: 3px solid #FFF; height:150px;width:150px" />
    <span class="post-date">
      
      November 
-     2nd,
-       
-     2013
-     <small style="text-transform:none">original post at wowmoron.wordpress.com</small> 
+     12th,
+     
+     2015
+      
    </span>
     <div class="article_body" id="article_body">
-    <p><img src="/assets/media/lamp.jpg" width="85%" />
+    <p><img src="/assets/media/Lamp.jpg" width="85%" />
 <br />
 <br />
-LAMP(Linux, Apache, MySQL, PHP or Perl) is one of the most essential servers needed by the web developers or web entrepreneurs around the globe. This tutorial explains one of the easiest ways to install LAMP on Ubuntu. Because Ubuntu uses Linux as it’s kernel we are done with the Linux part ;) .</p>
+Linux, <a href="http://httpd.apache.org/">Apache</a>, MySQL/MariaDB, PHP: In short LAMP, a complete Open Source solution for web-developer. Apache Web Server,Often referred to as simply <a href="http://httpd.apache.org/">Apache</a>, a public-domain open source Web server developed by a loosely-knit group of programmers which runs roughly 50% of the servers in the world.
+Here i show you the simple steps to install LAMP on your Arch System:</p>
 
-<p>Install tasksel on your system:</p>
+<p>Install php,php-apache,apache and mariadb:
+(note: use your favorite text editor, am using “gedit”)</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">tasksel</span></code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">sudo</span> <span class="no">Pacman</span> <span class="o">-</span><span class="n">S</span> <span class="n">php</span><span class="o">-</span><span class="n">apache</span> <span class="n">apache</span> <span class="n">mariadb</span></code></pre></div>
 
-<p>Tasksel is a Debian/Ubuntu tool that installs multiple related packages as a co-ordinated “task” onto your system.
-Start tasksel:</p>
+<p>Now configure apache:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">sudo</span> <span class="n">tasksel</span></code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">sudo</span> <span class="n">gedit</span> <span class="sr">/etc/</span><span class="n">httpd</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">httpd</span><span class="o">.</span><span class="n">conf</span> 
 
-<p>select the lamp-server and press ‘Ok’. Follow the steps as directed and create your Mysql password.&lt;/br&gt;
-Lastly,start apache2 server:</p>
+<span class="c1">#&gt; comment the line .i.e. put a # before it.</span>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">sudo</span> <span class="n">service</span> <span class="n">apache2</span> <span class="n">restart</span></code></pre></div>
+<span class="no">LoadModule</span> <span class="n">unique_id_module</span> <span class="n">modules</span><span class="o">/</span><span class="n">mod_unique_id</span><span class="o">.</span><span class="n">so</span>
 
-<p>Congratulations you have successfully installed LAMP server on your system. To test just visit your web browser and type in the following url:</p>
+<span class="c1">#&gt; restart apache</span>
 
-<p><a href="http://localhost/">http://localhost/</a></p>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">restart</span> <span class="n">httpd</span></code></pre></div>
 
-<p>To test the php installation:</p>
+<p>then configure mariadb:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">sudo</span> <span class="n">nano</span> <span class="sr">/var/</span><span class="n">www</span><span class="o">/</span><span class="n">phptest</span><span class="o">.</span><span class="n">php</span></code></pre></div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">start</span> <span class="n">mysqld</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">mysql_secure_installation</span>
 
-<p>type in and save:</p>
+<span class="c1">#&gt; press enter and then &quot;yes&quot; to all.</span></code></pre></div>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="p">?</span><span class="n">php</span> <span class="n">phpinfo</span><span class="p">();</span> <span class="sc">?&gt;</span></code></pre></div>
+<p>Lastly configure php and php-apache:</p>
 
-<p>and open the following url in your browser:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">sudo</span> <span class="n">gedit</span> <span class="sr">/etc/</span><span class="n">httpd</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">httpd</span><span class="o">.</span><span class="n">conf</span>
 
-<p><a href="http://localhost/phptest.php">http://localhost/phptest.php</a></p>
+<span class="c1">#&gt; add the following lines at the end of the files</span>
+
+<span class="no">LoadModule</span> <span class="n">php5_module</span> <span class="n">modules</span><span class="o">/</span><span class="n">libphp5</span><span class="o">.</span><span class="n">so</span> 
+<span class="no">AddHandler</span> <span class="n">php5</span><span class="o">-</span><span class="n">script</span> <span class="n">php</span> 
+<span class="no">Include</span> <span class="n">conf</span><span class="o">/</span><span class="n">extra</span><span class="o">/</span><span class="n">php5_module</span><span class="o">.</span><span class="n">conf</span>
+
+<span class="c1">#&gt; save and exit .</span>
+
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">gedit</span> <span class="sr">/srv/</span><span class="n">http</span><span class="o">/</span><span class="n">info</span><span class="o">.</span><span class="n">php</span>
+
+<span class="c1">#&gt; add this in your php file:</span>
+
+<span class="o">&lt;</span><span class="p">?</span><span class="n">php</span> <span class="n">phpinfo</span><span class="p">();</span> <span class="sc">?&gt;</span></code></pre></div>
+
+<p>finally, restart apache and all is done.enjoy!</p>
 
     </div>
 
@@ -226,8 +241,8 @@ Lastly,start apache2 server:</p>
       
        
         <li>
-          <a href="http://blog.ankanbiswas.in/uno-dbyll/tags.html#ubuntu-ref">
-          ubuntu <span>(1)</span>
+          <a href="http://blog.ankanbiswas.in/uno-dbyll/tags.html#Arch-ref">
+          Arch <span>(2)</span>
           ,
           </a>
         </li>
@@ -247,8 +262,29 @@ Lastly,start apache2 server:</p>
         </li>
        
         <li>
-          <a href="http://blog.ankanbiswas.in/uno-dbyll/tags.html#tasksel-ref">
-          tasksel <span>(1)</span>
+          <a href="http://blog.ankanbiswas.in/uno-dbyll/tags.html#php-ref">
+          php <span>(2)</span>
+          ,
+          </a>
+        </li>
+       
+        <li>
+          <a href="http://blog.ankanbiswas.in/uno-dbyll/tags.html#mariadb-ref">
+          mariadb <span>(2)</span>
+          ,
+          </a>
+        </li>
+       
+        <li>
+          <a href="http://blog.ankanbiswas.in/uno-dbyll/tags.html#appache-ref">
+          appache <span>(2)</span>
+          ,
+          </a>
+        </li>
+       
+        <li>
+          <a href="http://blog.ankanbiswas.in/uno-dbyll/tags.html#mysql-ref">
+          mysql <span>(2)</span>
           
           </a>
         </li>
@@ -263,7 +299,7 @@ Lastly,start apache2 server:</p>
     <div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Easiest Way To Install Lamp On Ubuntu&via=talk2ankan"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Lamp Installation on Arch&via=talk2ankan"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter fa-lg"></i>
           Twitter
@@ -291,10 +327,10 @@ Lastly,start apache2 server:</p>
 
     <ul class="pager">
       
-      <li class="previous disabled"><a>&larr; Previous</a></li>
+      <li class="previous"><a href="http://blog.ankanbiswas.in/uno-dbyll/lamp-installation-on-Arch" title="Lamp Installation on Arch">&larr; Previous</a></li>
       
       
-      <li class="next"><a href="http://blog.ankanbiswas.in/uno-dbyll/lamp-installation-on-Arch" title="Lamp Installation on Arch">Next &rarr;</a></li>
+      <li class="next disabled"><a>Next &rarr;</a>
       
     </ul>
 

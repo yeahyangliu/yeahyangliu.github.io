@@ -15,14 +15,25 @@
 <link rel="stylesheet" type="text/css" href="/assets/resources/syntax/syntax.css">
 <link rel="stylesheet" type="text/css" href="/assets/resources/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/assets/resources/font-awesome/css/font-awesome.min.css">
+<link rel="icon" href="https://raw.githubusercontent.com/talk2ankan/uno-dbyll/gh-pages/uno-dbyll.png">
 
 <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.js"></script>
-	<script type="text/javascript" src="/assets/js/app.js"></script>
 	
-
+<script type="text/javascript">
+$(document).ready(function(){
+if(window.location.href=="http://blog.ankanbiswas.in/uno-dbyll/")
+{
+$("#sidebar").css({width:'100%'});
+$("#btnblog").click(function(){
+$("#sidebar").animate({width:'33.3333%'},'slow');
+});
+}
+});
+	
+</script>
 	</head>
 <body>
 
@@ -54,9 +65,9 @@
      
 
      
-      <a class="navbar-brand" href="/">
-        <img src="http://www.gravatar.com/avatar/35c5e037a8f897506f3d2d4c059130f0?s=35" class="img-circle" />
-        I'm Ankan Biswas
+      <a class="navbar-brand" href="http://blog.ankanbiswas.in/uno-dbyll">
+        <img src="https://raw.githubusercontent.com/talk2ankan/uno-dbyll/gh-pages/uno-dbyll.png" class="img-circle" style="height:35px;width:35px"/>
+        uno-dbyll
       </a>
     </div>
     
@@ -64,9 +75,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbarHeaderCollapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="http://ankanbiswas.in/categories.html">Categories</a></li>
-        <li><a href="http://ankanbiswas.in/tags.html">Tags</a></li>
+        <li class="active"><a href="http://blog.ankanbiswas.in/uno-dbyll">Home</a></li>
+        <li><a href="http://blog.ankanbiswas.in/uno-dbyll/categories.html">Categories</a></li>
+        <li><a href="http://blog.ankanbiswas.in/uno-dbyll/tags.html">Tags</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
 
@@ -78,9 +89,9 @@
      <i class="fa fa-bars"></i>
    </button>
    <ul class="dropdown-menu pull-right" role="menu">
-     <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-     <li><a href="http://ankanbiswas.in/categories.html"><i class="fa fa-folder"></i> Categories</a></li>
-     <li><a href="http://ankanbiswas.in/tags.html"><i class="fa fa-tags"></i> Tags</a></li>
+     <li><a href="http://blog.ankanbiswas.in/uno-dbyll"><i class="fa fa-home"></i> Home</a></li>
+     <li><a href="http://blog.ankanbiswas.in/uno-dbyll/categories.html"><i class="fa fa-folder"></i> Categories</a></li>
+     <li><a href="http://blog.ankanbiswas.in/uno-dbyll/tags.html"><i class="fa fa-tags"></i> Tags</a></li>
      <li class="divider"></li>
      <li><a href="#"><i class="fa fa-arrow-up"></i> Top of Page</a></li>
    </ul>
@@ -89,18 +100,18 @@
 <div class="col-sm-4 sidebar hidden-xs" id="sidebar">
 		<! -- sidebar.html -->
 <header class="sidebar-header" role="banner">
-	<a href="http://ankanbiswas.in">
-		<img src="http://www.gravatar.com/avatar/35c5e037a8f897506f3d2d4c059130f0?s=85" class="img-circle" style="border-radius: 50%;
-border: 3px solid #FFF;" />
+	<a href="http://blog.ankanbiswas.in/uno-dbyll">
+		<img src="https://raw.githubusercontent.com/talk2ankan/uno-dbyll/gh-pages/uno-dbyll.png" class="img-circle" style="border-radius: 50%;
+border: 3px solid #FFF; height:150px;width:150px" />
 	</a>
 	<h3 class="title">
-        <a href="http://ankanbiswas.in">I'm Ankan Biswas</a>
-         <p style="font-size:20px;">Computer Programmer</p>
+        <a href="http://blog.ankanbiswas.in/uno-dbyll">uno-dbyll</a>
+         <p style="font-size:20px;">Jekyll Theme</p>
     </h3>
     
     <hr class="hr-line">
 <h3 class="title">
-         <p style="font-size:18px">Salutation, this is my-space my-world. I dream , i hallucinate, i am curious and ambitious.</p>
+         <p style="font-size:18px">Simple, clean, responsive and stylist theme for jekyll. </p>
     </h3>
 
     <hr class="hr-line1">
@@ -123,7 +134,7 @@ border: 3px solid #FFF;" />
       </a>
       
        <hr class="hr-line1">
-       <a type="button"  style="font-size:20px; padding:7px; padding-left:13px;padding-right:13px;margin-right: 10px;" class="social3 " id="btnblog" href="/#blog">
+       <a type="button"  style="font-size:20px; padding:7px; padding-left:13px;padding-right:13px;margin-right: 10px;" class="social3 " id="btnblog" href="http://blog.ankanbiswas.in/uno-dbyll/#blog">
         <i class="fa" style="font-weight:bold;letter-spacing:0; font-family:arial,sans-serif">Blog</i>
       </a>
       </h3>
@@ -133,6 +144,7 @@ border: 3px solid #FFF;" />
 
 
 <! -- sidebar.html end -->
+
 	</div>
 
 <div class="col-sm-8 col-sm-offset-4" id="container">
@@ -150,49 +162,49 @@ border: 3px solid #FFF;" />
       
       <li>
           <a style="font-family:ubuntu; color:#666;font-weight:bold" href="#Arch-ref" data-toggle="tab">
-            Arch<span class="badge pull-right">1</span>
+            Arch<span class="badge pull-right">2</span>
          </a>
       </li>
    
       
       <li>
           <a style="font-family:ubuntu; color:#666;font-weight:bold" href="#appache-ref" data-toggle="tab">
-            appache<span class="badge pull-right">1</span>
+            appache<span class="badge pull-right">2</span>
          </a>
       </li>
    
       
       <li>
           <a style="font-family:ubuntu; color:#666;font-weight:bold" href="#lamp-ref" data-toggle="tab">
-            lamp<span class="badge pull-right">2</span>
+            lamp<span class="badge pull-right">3</span>
          </a>
       </li>
    
       
       <li>
           <a style="font-family:ubuntu; color:#666;font-weight:bold" href="#mariadb-ref" data-toggle="tab">
-            mariadb<span class="badge pull-right">1</span>
+            mariadb<span class="badge pull-right">2</span>
          </a>
       </li>
    
       
       <li>
           <a style="font-family:ubuntu; color:#666;font-weight:bold" href="#mysql-ref" data-toggle="tab">
-            mysql<span class="badge pull-right">1</span>
+            mysql<span class="badge pull-right">2</span>
          </a>
       </li>
    
       
       <li>
           <a style="font-family:ubuntu; color:#666;font-weight:bold" href="#php-ref" data-toggle="tab">
-            php<span class="badge pull-right">1</span>
+            php<span class="badge pull-right">2</span>
          </a>
       </li>
    
       
       <li>
           <a style="font-family:ubuntu; color:#666;font-weight:bold" href="#setup-ref" data-toggle="tab">
-            setup<span class="badge pull-right">2</span>
+            setup<span class="badge pull-right">3</span>
          </a>
       </li>
    
@@ -220,7 +232,9 @@ border: 3px solid #FFF;" />
       <h2 style="margin-top: 0px;font-weight:bold;font-family: ubuntu;">Posts tagged  with Arch</h2>
       <ul class="list-unstyled">
         
-          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://ankanbiswas.in/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/new-create">Lamp Installation on Arch</a> <span class="text-muted">- November 12, 2015</span></li>
+        
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
         
       </ul>
     </div>
@@ -230,7 +244,9 @@ border: 3px solid #FFF;" />
       <h2 style="margin-top: 0px;font-weight:bold;font-family: ubuntu;">Posts tagged  with appache</h2>
       <ul class="list-unstyled">
         
-          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://ankanbiswas.in/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/new-create">Lamp Installation on Arch</a> <span class="text-muted">- November 12, 2015</span></li>
+        
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
         
       </ul>
     </div>
@@ -240,9 +256,11 @@ border: 3px solid #FFF;" />
       <h2 style="margin-top: 0px;font-weight:bold;font-family: ubuntu;">Posts tagged  with lamp</h2>
       <ul class="list-unstyled">
         
-          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://ankanbiswas.in/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/new-create">Lamp Installation on Arch</a> <span class="text-muted">- November 12, 2015</span></li>
         
-          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://ankanbiswas.in/easiest-way-to-install-lamp-on-ubuntu">Easiest Way To Install Lamp On Ubuntu</a> <span class="text-muted">- November 02, 2013</span></li>
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
+        
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/easiest-way-to-install-lamp-on-ubuntu">Easiest Way To Install Lamp On Ubuntu</a> <span class="text-muted">- November 02, 2013</span></li>
         
       </ul>
     </div>
@@ -252,7 +270,9 @@ border: 3px solid #FFF;" />
       <h2 style="margin-top: 0px;font-weight:bold;font-family: ubuntu;">Posts tagged  with mariadb</h2>
       <ul class="list-unstyled">
         
-          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://ankanbiswas.in/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/new-create">Lamp Installation on Arch</a> <span class="text-muted">- November 12, 2015</span></li>
+        
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
         
       </ul>
     </div>
@@ -262,7 +282,9 @@ border: 3px solid #FFF;" />
       <h2 style="margin-top: 0px;font-weight:bold;font-family: ubuntu;">Posts tagged  with mysql</h2>
       <ul class="list-unstyled">
         
-          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://ankanbiswas.in/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/new-create">Lamp Installation on Arch</a> <span class="text-muted">- November 12, 2015</span></li>
+        
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
         
       </ul>
     </div>
@@ -272,7 +294,9 @@ border: 3px solid #FFF;" />
       <h2 style="margin-top: 0px;font-weight:bold;font-family: ubuntu;">Posts tagged  with php</h2>
       <ul class="list-unstyled">
         
-          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://ankanbiswas.in/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/new-create">Lamp Installation on Arch</a> <span class="text-muted">- November 12, 2015</span></li>
+        
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
         
       </ul>
     </div>
@@ -282,9 +306,11 @@ border: 3px solid #FFF;" />
       <h2 style="margin-top: 0px;font-weight:bold;font-family: ubuntu;">Posts tagged  with setup</h2>
       <ul class="list-unstyled">
         
-          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://ankanbiswas.in/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/new-create">Lamp Installation on Arch</a> <span class="text-muted">- November 12, 2015</span></li>
         
-          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://ankanbiswas.in/easiest-way-to-install-lamp-on-ubuntu">Easiest Way To Install Lamp On Ubuntu</a> <span class="text-muted">- November 02, 2013</span></li>
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/lamp-installation-on-Arch">Lamp Installation on Arch</a> <span class="text-muted">- November 03, 2013</span></li>
+        
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/easiest-way-to-install-lamp-on-ubuntu">Easiest Way To Install Lamp On Ubuntu</a> <span class="text-muted">- November 02, 2013</span></li>
         
       </ul>
     </div>
@@ -294,7 +320,7 @@ border: 3px solid #FFF;" />
       <h2 style="margin-top: 0px;font-weight:bold;font-family: ubuntu;">Posts tagged  with tasksel</h2>
       <ul class="list-unstyled">
         
-          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://ankanbiswas.in/easiest-way-to-install-lamp-on-ubuntu">Easiest Way To Install Lamp On Ubuntu</a> <span class="text-muted">- November 02, 2013</span></li>
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/easiest-way-to-install-lamp-on-ubuntu">Easiest Way To Install Lamp On Ubuntu</a> <span class="text-muted">- November 02, 2013</span></li>
         
       </ul>
     </div>
@@ -304,7 +330,7 @@ border: 3px solid #FFF;" />
       <h2 style="margin-top: 0px;font-weight:bold;font-family: ubuntu;">Posts tagged  with ubuntu</h2>
       <ul class="list-unstyled">
         
-          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://ankanbiswas.in/easiest-way-to-install-lamp-on-ubuntu">Easiest Way To Install Lamp On Ubuntu</a> <span class="text-muted">- November 02, 2013</span></li>
+          <li style="line-height: 35px;"><a style="font-family: 'Raleway', sans-serif; color:#333;font-weight:bold" href="http://blog.ankanbiswas.in/uno-dbyll/easiest-way-to-install-lamp-on-ubuntu">Easiest Way To Install Lamp On Ubuntu</a> <span class="text-muted">- November 02, 2013</span></li>
         
       </ul>
     </div>
@@ -318,7 +344,7 @@ border: 3px solid #FFF;" />
 <footer class="navbar navbar-default">
     <div class="container">
       <p class="navbar-text pull-left">Some rights reserved &copy; 2015 Ankan Biswas. </br>
-      Created using <a class="navbar-button" href="https://github.com/twbs/bootstrap">Bootstrap3</a> and <a class="navbar-button" href="https://github.com/jekyll/jekyll">Jekyll</a>. Theme : <a class="navbar-button" href="#">uno-dbyll</a> by talk2ankan.
+      Created using <a class="navbar-button" href="https://github.com/twbs/bootstrap">Bootstrap3</a> and <a class="navbar-button" href="https://github.com/jekyll/jekyll">Jekyll</a>. Theme : <a class="navbar-button" href="https://github.com/talk2ankan/uno-dbyll">uno-dbyll</a> by talk2ankan.
  </p>
  </div>
   </footer>
