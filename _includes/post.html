@@ -78,8 +78,8 @@
         <h4 class="section-title">Share Post</h4>
         <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text={{page.title | encode}}{% if site.author.twitter%}&via={{site.author.twitter}}{% endif %}"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-          <i class="fa fa-twitter fa-lg"></i>
-          Twitter
+          <i class="fa fa-weixin fa-lg"></i>
+          Wechat
         </a>
         <a class="btn btn-default btn-sm facebook" href="https://www.facebook.com/sharer/sharer.php"
            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
@@ -104,14 +104,14 @@
 
     <ul class="pager">
       {% if page.previous %}
-      <li class="previous"><a href="{{ site.BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+      <li class="previous"><a href="{{ site.BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; 上一篇</a></li>
       {% else %}
-      <li class="previous disabled"><a>&larr; Previous</a></li>
+      <li class="previous disabled"><a>&larr; 上一篇</a></li>
       {% endif %}
       {% if page.next %}
-      <li class="next"><a href="{{ site.BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+      <li class="next"><a href="{{ site.BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇 &rarr;</a></li>
       {% else %}
-      <li class="next disabled"><a>Next &rarr;</a>
+      <li class="next disabled"><a>下一篇 &rarr;</a>
       {% endif %}
     </ul>
 
