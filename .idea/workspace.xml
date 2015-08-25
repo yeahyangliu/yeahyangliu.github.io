@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/media/background-cover-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/media/background-cover-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/jquery-1.3.2.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/media/background-cover.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/media/background-cover.jpg" afterPath="$PROJECT_DIR$/assets/media/background-cover-1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/assets/media/alex-two.png" afterPath="$PROJECT_DIR$/_site/assets/media/alex-two.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories.html" afterPath="$PROJECT_DIR$/_site/categories.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/default.html" afterPath="$PROJECT_DIR$/_includes/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/Guava带Java飞/index.html" afterPath="$PROJECT_DIR$/_site/Guava带Java飞/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/javascript-module-pattern/index.html" afterPath="$PROJECT_DIR$/_site/javascript-module-pattern/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/状态机实战/index.html" afterPath="$PROJECT_DIR$/_site/状态机实战/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/玩转 JavaScript Callback函数/index.html" afterPath="$PROJECT_DIR$/_site/玩转 JavaScript Callback函数/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/玩转 JavaScript this指针/index.html" afterPath="$PROJECT_DIR$/_site/玩转 JavaScript this指针/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/assets/css/style.css" afterPath="$PROJECT_DIR$/_site/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags.html" afterPath="$PROJECT_DIR$/_site/tags.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/media/background-cover-3.jpg" afterPath="$PROJECT_DIR$/assets/media/background-cover-3.jpg" />
     </list>
     <ignored path="yeahyangliu.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,15 +27,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="default.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.798103" vertical-offset="0" max-vertical-offset="2660">
+            <state vertical-scroll-proportion="-21.035715" vertical-offset="0" max-vertical-offset="2660">
               <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#3;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="background-cover-3.jpg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/media/background-cover-3.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -81,16 +71,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="2223" max-vertical-offset="2337">
               <caret line="117" column="3" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2013-04-19-状态机实战.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2013-04-19-状态机实战.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1881">
-              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -332,8 +312,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/js" />
       <recent name="$PROJECT_DIR$/assets/media" />
+      <recent name="$PROJECT_DIR$/assets/js" />
       <recent name="$PROJECT_DIR$/_posts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -822,12 +802,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.798103" vertical-offset="0" max-vertical-offset="2660">
+        <state vertical-scroll-proportion="-21.035715" vertical-offset="0" max-vertical-offset="2660">
           <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#3;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/media/background-cover-3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
