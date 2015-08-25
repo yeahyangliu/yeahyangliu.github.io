@@ -8,7 +8,6 @@ tags: [JavaScript]
 ---
 <br/>
     在web项目中Javascript是一门必须要掌握的动态语言，基于Javascript的框架大多离不开不了最基础的Javascript的用法和原理。本文主要是总结一下Javascript中那万恶的this关键字。
-<br/>
 开门见山，抛出一个观点：
 
 >“Javascript中this永远是指向调用它的对象”。
