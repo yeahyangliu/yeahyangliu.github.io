@@ -14,20 +14,20 @@ paginate_path: "page/:num"
 categories_path : categories.html
 tags_path : tags.html
 
-BASE_PATH : http://blog.ankanbiswas.in/uno-dbyll
+BASE_PATH : http://yeahyangliu.github.io
 
 
-title : uno-dbyll
+title : Alex Yang
 
 
 
 author:
-  name: Ankan Biswas
-  role: Jekyll Theme
-  email: support@ankanbiswas.in
-  github: talk2ankan
-  twitter: talk2ankan
-  facebook: talk2ankan
+  name: Alex Yang
+  role: Developer
+  email: yangliualex@gmail.com
+  github: yeahyangliu
+  weixin: test
+  facebook: yeahyangliu
   googleplus: +AnkanBiswasWorkspace
-  bio: "Simple, clean, responsive and stylist theme for jekyll. "
-  uno-dbyll: https://raw.githubusercontent.com/talk2ankan/uno-dbyll/gh-pages/uno-dbyll.png
+  bio: "喜欢新技术，Lisper，TW武汉Open Party负责人"
+  uno-dbyll: ../assets/media/alex.png

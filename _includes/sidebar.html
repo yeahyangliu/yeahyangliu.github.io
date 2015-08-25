@@ -1,17 +1,17 @@
 <! -- sidebar.html -->
 <header class="sidebar-header" role="banner">
 	<a href="{{ site.BASE_PATH }}">
-		<img src="../assets/media/alex.png" class="img-circle" style="border-radius: 50%;
+		<img src="{{site.author.uno-dbyll}}" class="img-circle" style="border-radius: 50%;
 border: 3px solid #FFF; height:150px;width:150px" />
 	</a>
 	<h3 class="title">
-        <a href="{{ site.BASE_PATH }}">测试</a>
-         <p style="font-size:20px;">文档</p>
+        <a href="{{ site.BASE_PATH }}">{{ site.title }}</a>
+         <p style="font-size:20px;">{{ site.author.role }}</p>
     </h3>
     
     <hr class="hr-line">
 <h3 class="title">
-         <p style="font-size:18px">在哪</p>
+         <p style="font-size:18px"></p>
     </h3>
 
     <hr class="hr-line1">
@@ -22,14 +22,14 @@ border: 3px solid #FFF; height:150px;width:150px" />
         <i class="fa fa-github"></i>
       </a>
       {% endif %}
-       {% if site.author.twitter %}
-      <a type="button" class="social2" href="http://twitter.com/{{ site.author.twitter }}">
-        <i class="fa fa-wexin"></i>
+       {% if site.author.weixin %}
+      <a type="button" class="social2" href="http://twitter.com/{{ site.author.weixin }}">
+        <i class="fa fa-wechat"></i>
       </a>
       {% endif %}
      
-      {% if site.author.email %}
-      <a type="button" class="social3" href="mailto:{{ site.author.email }}">
+      {% if site.author.facebook %}
+      <a type="button" class="social3" href="https://www.facebook.com/{{site.author.facebook}}">
         <i class="fa fa-facebook"></i>
       </a>
       {% endif %}
