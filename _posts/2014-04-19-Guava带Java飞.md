@@ -2,7 +2,7 @@
 layout: post
 title: Guava带Java飞
 description: Google出品的Guava给冗余的Java带来一些函数式的清风
-categories: [服务器端]
+categories: [后端]
 tags: [Java]
 
 ---
