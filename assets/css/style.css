@@ -144,27 +144,12 @@ footer {
 	border:1px solid white;
 	padding-left: 13px;
 	border-radius: 20px;
-margin-left: 3px;
-	margin-right: 3px;
-}
-
-.social2{
-
-	border:1px solid white;
-	padding-left: 15px;
-	border-radius: 20px;
-	margin-left: 3px;
-	margin-right: 3px;
-
-}
-
-.social3{
-
-	border:1px solid white;
-	padding-left: 13px;
-	border-radius: 20px;
-	padding-right: 12px;
 	margin-left: 3px;
 	margin-right: 3px;
 }
 
+.social2 i{
+
+	font-weight: bold;
+
+}
