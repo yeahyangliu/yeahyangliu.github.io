@@ -1,0 +1,18 @@
+---
+layout: page
+title: 杨柳
+---
+
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_words = site_tags | split:',' | sort %}
+
+
+<div class="col-sm-3 col-xs-9">
+
+</div>
+<!-- Tab panes -->
+<div class="tab-content col-sm-9 col-xs-6">
+    <embed src="http://player.youku.com/player.php/Type/Folder/Fid/26133636/Ob/1/sid/XMTM1MzgzNDM3Ng==/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
+</div>
+
+<div class="clearfix"></div>

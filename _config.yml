@@ -13,6 +13,7 @@ paginate_path: "page/:num"
 #
 categories_path : categories.html
 tags_path : tags.html
+me_path : me.html
 
 BASE_PATH : http://yeahyangliu.github.io
 
