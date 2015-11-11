@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS玩转Position
-description: CSS - position
+description: CSS中position的介绍和用法
 categories: [前端]
 tags: [CSS]
 
