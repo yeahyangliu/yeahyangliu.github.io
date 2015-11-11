@@ -5,7 +5,7 @@
 		<title>Game of Throne | Alex</title>
 
 	
-	<meta name="description" content="CSS - position">
+	<meta name="description" content="CSS中position的介绍和用法">
 	
 
 	<meta name="author" content="Alex Yang">
@@ -22,23 +22,10 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript" src="/assets/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>
 	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.js"></script>
 
-<script type="text/javascript">
-$(document).ready(function(){
 
-$("#sidebar").addClass("img-" +Math.round((Math.random()*2 +1)) );
-
-if(window.location.href=="http://yeahyangliu.github.io/")
-{
-$("#sidebar").css({width:'100%'});
-$("#btnblog").click(function(){
-    $("#sidebar").animate({width:'33.3333%'},'slow');
-});
-}
-});
-
-</script>
 	</head>
 <body>
 
@@ -150,7 +137,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 <div class="page-header">
   <h1>CSS玩转Position </h1>
 </div>
-  
+
 <article>
 
   <div class="col-sm-10">
@@ -163,7 +150,9 @@ border: 3px solid #FFF; height:150px;width:150px"/>
       
    </span>
     <div class="article_body" id="article_body">
-    <p><br />
+    <p><img src="/assets/image/css-position.jpg" alt="position" /></p>
+
+<p><br />
     布局是前端开发必须要掌握的技能，我会详细介绍position的4种状态并且用实例演示如何使用他们。
 <br />
     position的四种状态分别是：<code>static</code>， <code>relative</code>， <code>absolute</code>， <code>fixed</code>。下面我将分别介绍这四种属性
@@ -192,8 +181,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 <pre><code>    fixed是指元素脱离文档流，并且位置相对视窗固定，这就意味着滚动页面不会影响该元素的位置和显示。他同样有四个属性进行调整他所相对视窗边距的位移。
 </code></pre>
 
-<p><br />
-    如果你对我的描述感到困惑，不放看我的一个示例，里面清晰简洁的使用了position这个属性。<a target="_blank" href="http://jsfiddle.net/Alex___Yang/f9pvsdsc/">如果你打不开，你就土了</a></p>
+<p>如果你对我的描述感到困惑，不妨看我的一个示例，里面清晰简洁的使用了position这个属性。<a href="http://jsfiddle.net/Alex___Yang/f9pvsdsc/">如果你打不开，你就土了</a></p>
 
     </div>
 
@@ -202,7 +190,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
       <li><i class="fa fa-folder-open"></i></li>
       
       
-       
+      
         <li><a href="http://yeahyangliu.github.io/categories.html#前端-ref">
           前端 <span>(5)</span>
           
@@ -210,14 +198,14 @@ border: 3px solid #FFF; height:150px;width:150px"/>
       
       
     </ul>
-      
+    
 
     
     <ul class="list-inline">
       <li><i class="fa fa-tags"></i></li>
       
       
-       
+      
         <li>
           <a href="http://yeahyangliu.github.io/tags.html#CSS-ref">
           CSS <span>(1)</span>
@@ -228,7 +216,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
       
       
     </ul>
-      
+    
 
     <hr>
 
@@ -275,7 +263,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
     <div id="uyan_frame"></div>
     <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2063602"></script>
     <!-- UY END -->
-    
+
 </article>
 <div class="clearfix"></div>
 

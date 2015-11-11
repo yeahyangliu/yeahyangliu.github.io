@@ -6,6 +6,8 @@ categories: [前端]
 tags: [CSS]
 
 ---
+![position](/assets/image/css-position.jpg)
+
 <br/>
     布局是前端开发必须要掌握的技能，我会详细介绍position的4种状态并且用实例演示如何使用他们。
 <br/>
@@ -31,5 +33,6 @@ tags: [CSS]
 
         fixed是指元素脱离文档流，并且位置相对视窗固定，这就意味着滚动页面不会影响该元素的位置和显示。他同样有四个属性进行调整他所相对视窗边距的位移。
 
-<br/>
-    如果你对我的描述感到困惑，不妨看我的一个示例，里面清晰简洁的使用了position这个属性。<a target="_blank" href='http://jsfiddle.net/Alex___Yang/f9pvsdsc/'>如果你打不开，你就土了</a>
+
+
+如果你对我的描述感到困惑，不妨看我的一个示例，里面清晰简洁的使用了position这个属性。[如果你打不开，你就土了](http://jsfiddle.net/Alex___Yang/f9pvsdsc/)
