@@ -5,7 +5,7 @@
 		<title>Game of Throne | Alex</title>
 
 	
-	<meta name="description" content="Web2.0">
+	<meta name="description" content="CSS中pseudo的介绍和用法">
 	
 
 	<meta name="author" content="Alex Yang">
@@ -135,7 +135,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 <div class="col-sm-8 col-sm-offset-4" id="container">
   
 <div class="page-header">
-  <h1>Web前端开发概述 </h1>
+  <h1>CSS玩转伪元素 </h1>
 </div>
 
 <article>
@@ -143,23 +143,45 @@ border: 3px solid #FFF; height:150px;width:150px"/>
   <div class="col-sm-10">
    <span class="post-date">
      
-     October 
-     10th,
+     November 
+     12th,
      
      2015
       
    </span>
     <div class="article_body" id="article_body">
-    <p><br />
-    什么是Web前端开发？也许有人会说Web前端开发就是网页设计，就是美工，也有人会说就是各种工具拖拽生成的网站而已。
-    其实这些说法都是对Web前端开发的误解。
-<br />
-    对于Web前端，业内公认的说法是从2005年开始兴起的。2005年以前，因为Web主要以展示为主，内容基本上都是静态的，
-    所以客户端开发的目的就是让页面更加整齐和漂亮。用户也只是以浏览为主，不会有复杂的交互。伴随着产生了Photoshop和
-    Dreamweaver等工具的制作和兴起。2005年之后，互联网进入2.0时代，Web2.0更注重用户交互，用户不再只是读者，他们也是
-    内容的创建者和贡献者。随着这一概念的发展，人们开始重新审视网站的设计，制作的网页慢慢变得生动起来，页面有了大量的交互。
-    Google Gmail的发布，是的AJAX技术大红大紫，这也把Web2.0概念的认证推向新的高度，使得用户操作页面更加流畅，
-    操作体验接近于本地应用。</p>
+    <p><img src="/assets/image/css-pseudo.jpg" alt="pseudo" /></p>
+
+<p><br />
+伪类大家可能都不陌生，例如大家熟悉的<code>:hover</code>, <code>:link</code>等等，伪类是用来指定一个或者与其相关的选择符的状态。那么有多少人知道伪元素是干嘛的呢？
+我会给大家详细介绍伪类中的<code>:before</code>， <code>:after</code>， 并带大家使用伪类来制作上面这张图片。</p>
+
+<p>所谓<code>伪元素</code>，就是本身不存在的页面元素，HTML代码里并没有这样的元素。但在页面显示时，你却能看到这些本来不存在的元素发挥着作用。它会改变页面的渲染树，但是不会给页面的DOM树添加任何只用于展示的DOM。</p>
+
+<p>可能大家已经开始困惑了，什么是无用的DOM，为什么不存在的元素却能够让显示发生变化。OK，我们先从用法开始讲起。</p>
+
+<p><code>:before</code>， <code>:after</code>用法十分简单，它的作用是在元素前后插入新的内容，必须有content属性，外加一些样式。比如：</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">div</span><span class="o">:</span><span class="nx">before</span> <span class="p">{</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="nx">open</span><span class="o">-</span><span class="nx">quote</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">div</span><span class="o">:</span><span class="nx">after</span> <span class="p">{</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="nx">open</span><span class="o">-</span><span class="nx">quote</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">Alex</span><span class="o">&lt;</span><span class="err">/div&gt;</span></code></pre></div>
+
+<p>你会看到“This is Alex”，前后两个引号就是通过before和after添加上去的，如果你审查元素，你会发现DOM中找不到这两个引号的HTML。</p>
+
+<p>伪元素一般用于改变它们的前景颜色，增加背景色/图，调整字体大小，调整对齐方式等等。那么对于上图而言，我们可以采用两种方式实现：</p>
+
+<ul>
+  <li>使用两个div，一个放背景图，一个放黑色背景，然后让两个重叠，产生这种效果</li>
+  <li>使用一个黑色背景，然后使用伪元素，把图片背景添加上去</li>
+</ul>
+
+<p>如果你能还不能知道如何使用着两种方案实现这样的效果，<a href="https://jsfiddle.net/Alex___Yang/g0o1u6nb/1/">可以参考我的做法</a>。</p>
+
 
     </div>
 
@@ -185,8 +207,8 @@ border: 3px solid #FFF; height:150px;width:150px"/>
       
       
         <li>
-          <a href="http://yeahyangliu.github.io/tags.html#Web-ref">
-          Web <span>(1)</span>
+          <a href="http://yeahyangliu.github.io/tags.html#CSS-ref">
+          CSS <span>(2)</span>
           
           </a>
         </li>
@@ -201,7 +223,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
     <div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Web前端开发概述"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=CSS玩转伪元素"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-weixin fa-lg"></i>
           Wechat
@@ -229,10 +251,10 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 
     <ul class="pager">
       
-      <li class="previous"><a href="http://yeahyangliu.github.io/%E7%8E%A9%E8%BD%AC%20JavaScript%20Callback%E5%87%BD%E6%95%B0" title="玩转JavaScript Callback函数">&larr; 上一篇</a></li>
+      <li class="previous"><a href="http://yeahyangliu.github.io/CSS%E7%8E%A9%E8%BD%ACPosition" title="CSS玩转Position">&larr; 上一篇</a></li>
       
       
-      <li class="next"><a href="http://yeahyangliu.github.io/CSS%E7%8E%A9%E8%BD%ACPosition" title="CSS玩转Position">下一篇 &rarr;</a></li>
+      <li class="next disabled"><a>下一篇 &rarr;</a>
       
     </ul>
 
