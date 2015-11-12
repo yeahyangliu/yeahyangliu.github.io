@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/image/css-pseudo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2015-11-12-CSS玩转伪元素.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories.html" afterPath="$PROJECT_DIR$/_site/categories.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/CSS玩转Position/index.html" afterPath="$PROJECT_DIR$/_site/CSS玩转Position/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/Web前端开发概述/index.html" afterPath="$PROJECT_DIR$/_site/Web前端开发概述/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/javascript-module-pattern/index.html" afterPath="$PROJECT_DIR$/_site/javascript-module-pattern/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/玩转 JavaScript Callback函数/index.html" afterPath="$PROJECT_DIR$/_site/玩转 JavaScript Callback函数/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/玩转 JavaScript this指针/index.html" afterPath="$PROJECT_DIR$/_site/玩转 JavaScript this指针/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags.html" afterPath="$PROJECT_DIR$/_site/tags.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2015-11-12-CSS玩转伪元素.md" afterPath="$PROJECT_DIR$/_posts/2015-11-12-CSS玩转伪元素.md" />
     </list>
     <ignored path="yeahyangliu.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,8 +90,8 @@
       <file leaf-file-name="2015-11-12-CSS玩转伪元素.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2015-11-12-CSS玩转伪元素.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9177546" vertical-offset="0" max-vertical-offset="874">
-              <caret line="37" column="81" selection-start-line="37" selection-start-column="81" selection-end-line="37" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.94255877" vertical-offset="0" max-vertical-offset="893">
+              <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -833,8 +823,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2015-11-12-CSS玩转伪元素.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9177546" vertical-offset="0" max-vertical-offset="874">
-          <caret line="37" column="81" selection-start-line="37" selection-start-column="81" selection-end-line="37" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.94255877" vertical-offset="0" max-vertical-offset="893">
+          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
           <folding />
         </state>
       </provider>
