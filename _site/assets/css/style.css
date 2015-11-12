@@ -102,6 +102,8 @@ footer {
 
 .sidebar-header {
 	text-align: center;
+	position: relative;
+	z-index: 6;
 }
 .sidebar-header .title{
 	letter-spacing: 3px;
@@ -156,4 +158,16 @@ footer {
 
 img {
 	max-width: 100%;
+}
+
+
+#sidebar:after {
+	position: absolute;
+	top: 0;
+	opacity: .5;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background-color: #333333;
 }
