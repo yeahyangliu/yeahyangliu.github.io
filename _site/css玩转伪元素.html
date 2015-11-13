@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Game of Throne | Alex</title>
+
+	
+	<meta name="description" content="CSS中pseudo的介绍和用法">
+	
+
+	<meta name="author" content="Alex Yang">
+
+		<!-- Enable responsive viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="/assets/resources/syntax/syntax.css">
+<link rel="stylesheet" type="text/css" href="/assets/resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/resources/font-awesome/css/font-awesome.min.css">
+<link rel="icon" href="../assets/media/favicon.jpg">
+
+<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="/assets/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>
+	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.js"></script>
+
+
+	</head>
+<body>
+
+<nav class="navbar navbar-default visible-xs" role="navigation">
+
+
+ <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarHeaderCollapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a type="button" class="navbar-toggle nav-link" href="http://github.com/yeahyangliu">
+        <i class="fa fa-github"></i>
+      </a>
+      
+      
+       
+      <a type="button" class="navbar-toggle nav-link" href="mailto:yangliualex@gmail.com">
+        <i class="fa fa-envelope"></i>
+      </a>
+      
+
+
+
+      <a class="navbar-brand" href="http://yeahyangliu.github.io">
+        <img src="../assets/media/alex.png" class="img-circle" style="height:35px;width:35px"/>
+        Alex Yang
+      </a>
+    </div>
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbarHeaderCollapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://yeahyangliu.github.io">Home</a></li>
+        <li><a href="http://yeahyangliu.github.io/categories.html">Categories</a></li>
+        <li><a href="http://yeahyangliu.github.io/tags.html">Tags</a></li>
+        <li><a href="http://yeahyangliu.github.io/me.html">About Me</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+</nav>
+
+  <!-- nav-menu-dropdown -->
+  <div class="btn-group hidden-xs" id="nav-menu">
+   <button type="button" class="btn btn-default dropdown-toggle pull-right" data-toggle="dropdown">
+     <i class="fa fa-bars"></i>
+   </button>
+   <ul class="dropdown-menu pull-right" role="menu">
+     <li><a href="http://yeahyangliu.github.io"><i class="fa fa-home"></i> Home</a></li>
+     <li><a href="http://yeahyangliu.github.io/categories.html"><i class="fa fa-folder"></i> Categories</a></li>
+     <li><a href="http://yeahyangliu.github.io/tags.html"><i class="fa fa-tags"></i> Tags</a></li>
+     <li class="divider"></li>
+     <li><a href="#"><i class="fa fa-arrow-up"></i> Top of Page</a></li>
+   </ul>
+ </div>
+
+<div class="col-sm-4 sidebar hidden-xs" id="sidebar">
+		<! -- sidebar.html -->
+<header class="sidebar-header" role="banner">
+    <a href="http://yeahyangliu.github.io">
+        <img src="../assets/media/alex.png" class="img-circle" style="border-radius: 50%;
+border: 3px solid #FFF; height:150px;width:150px"/>
+    </a>
+
+    <h3 class="title">
+        <a href="http://yeahyangliu.github.io/me.html">Alex Yang</a>
+
+        <p style="font-size:20px;">Developer</p>
+    </h3>
+
+    <hr class="hr-line">
+    <h5 class="title">
+        <a type="button" class="social2" id="btnblog" href="http://yeahyangliu.github.io/#blog">
+            <i class="fa"
+            style="letter-spacing:0; position:relative; top:-5px; left: -5px; font-size:20px;font-family:arial,sans-serif">博客</i>
+        </a>
+    </h5>
+
+    <hr class="hr-line1">
+    <h3 class="title" style="font-size:30px;">
+
+        <a type="button" class="social1" href="http://github.com/yeahyangliu">
+            <i class="fa fa-github"></i>
+        </a>
+
+        <a type="button" class="social1" href="https://www.facebook.com/yeahyangliu">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a type="button" class="social1" href="https://cn.linkedin.com/pub/alex-yang/104/7a/147"
+                style="padding-right: 10px">
+            <i class="fa fa-linkedin"></i>
+        </a>
+
+    </h3>
+
+</header>
+
+
+<! -- sidebar.html end -->
+
+	</div>
+
+<div class="col-sm-8 col-sm-offset-4" id="container">
+  
+<div class="page-header">
+  <h1>CSS玩转伪元素 </h1>
+</div>
+
+<article>
+
+  <div class="col-sm-10">
+   <span class="post-date">
+     
+     November 
+     12th,
+     
+     2015
+      
+   </span>
+    <div class="article_body" id="article_body">
+    <p><img src="/assets/image/css-pseudo.jpg" alt="pseudo" /></p>
+
+<p><br />
+伪类大家可能都不陌生，例如大家熟悉的<code>:hover</code>, <code>:link</code>等等，伪类是用来指定一个或者与其相关的选择符的状态。那么有多少人知道伪元素是干嘛的呢？
+我会给大家详细介绍伪类中的<code>:before</code>， <code>:after</code>， 并带大家使用伪类来制作上面这张图片。</p>
+
+<p>所谓<code>伪元素</code>，就是本身不存在的页面元素，HTML代码里并没有这样的元素。但在页面显示时，你却能看到这些本来不存在的元素发挥着作用。它会改变页面的渲染树，但是不会给页面的DOM树添加任何只用于展示的DOM。</p>
+
+<p>可能大家已经开始困惑了，什么是无用的DOM，为什么不存在的元素却能够让显示发生变化。OK，我们先从用法开始讲起。</p>
+
+<p><code>:before</code>， <code>:after</code>用法十分简单，它的作用是在元素前后插入新的内容，必须有content属性，外加一些样式。比如：</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">div</span><span class="o">:</span><span class="nx">before</span> <span class="p">{</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="nx">open</span><span class="o">-</span><span class="nx">quote</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">div</span><span class="o">:</span><span class="nx">after</span> <span class="p">{</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="nx">open</span><span class="o">-</span><span class="nx">quote</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">Alex</span><span class="o">&lt;</span><span class="err">/div&gt;</span></code></pre></figure>
+
+<p>你会看到“This is Alex”，前后两个引号就是通过before和after添加上去的，如果你审查元素，你会发现DOM中找不到这两个引号的HTML。</p>
+
+<p>伪元素一般用于改变它们的前景颜色，增加背景色/图，调整字体大小，调整对齐方式等等。那么对于上图而言，我们可以采用两种方式实现：</p>
+
+<ul>
+  <li>使用两个div，一个放背景图，一个放黑色背景，然后让两个重叠，产生这种效果</li>
+  <li>使用一个黑色背景，然后使用伪元素，把图片背景添加上去</li>
+</ul>
+
+<p>如果你能还不能知道如何使用着两种方案实现这样的效果，<a href="https://jsfiddle.net/Alex___Yang/g0o1u6nb/1/">可以参考我的做法</a>。
+对于这两种方案，你是否有自己的看法呢，很明显，第一种做法会有一些没有意义的HTML，像这种时候，我们就该考虑使用伪元素啦。</p>
+
+
+    </div>
+
+    
+    <ul class="tag_box list-unstyled list-inline">
+      <li><i class="fa fa-folder-open"></i></li>
+      
+      
+      
+        <li><a href="http://yeahyangliu.github.io/categories.html#前端-ref">
+          前端 <span>(6)</span>
+          
+        </a></li>
+      
+      
+    </ul>
+    
+
+    
+    <ul class="list-inline">
+      <li><i class="fa fa-tags"></i></li>
+      
+      
+      
+        <li>
+          <a href="http://yeahyangliu.github.io/tags.html#CSS-ref">
+          CSS <span>(2)</span>
+          
+          </a>
+        </li>
+      
+      
+      
+    </ul>
+    
+
+    <hr>
+
+    <div>
+      <section class="share col-sm-6">
+        <h4 class="section-title">Share Post</h4>
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=CSS玩转伪元素"
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <i class="fa fa-weixin fa-lg"></i>
+          Wechat
+        </a>
+        <a class="btn btn-default btn-sm facebook" href="https://www.facebook.com/sharer/sharer.php"
+           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          <i class="fa fa-facebook fa-lg"></i>
+          Facebook
+        </a>
+        <a class="btn btn-default btn-sm gplus"
+           onclick="window.open('https://plus.google.com/share?url='+window.location.href, 'google-plus-share', 'width=490,height=530');return false;">
+          <i class="fa fa-google-plus fa-lg"></i>
+          Google+
+        </a>
+      </section>
+
+      <section class="col-sm-6 author">
+        <img src="../assets/media/alex.png" style="height:100px;width:100px;" class="img-rounded author-image" />
+        <h4 class="section-title author-name"><b>Alex Yang</b><br/><p style="color:#888;font-size:13px;">Developer</p></h4>
+        <p class="author-bio">任何编程语言中都没有什么魔法或者万灵丹药，使其使用者成为好的程序员</p>
+      </section>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <ul class="pager">
+      
+      <li class="previous"><a href="http://yeahyangliu.github.io/css%E7%8E%A9%E8%BD%ACposition" title="CSS玩转Position">&larr; 上一篇</a></li>
+      
+      
+      <li class="next disabled"><a>下一篇 &rarr;</a>
+      
+    </ul>
+
+  </div>
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2063602"></script>
+    <!-- UY END -->
+
+</article>
+<div class="clearfix"></div>
+
+
+<footer class="navbar navbar-default">
+    <div class="container">
+      <p class="navbar-text pull-left">Some rights reserved &copy; 2015 Alex Yang. </br>
+      想加入ThoughtWorks请将简历发送至 <a class="navbar-button" href="http://gmail.google.com/">liuyang@thoughtworks.com</a></p>
+ </div>
+  </footer>
+</div>
+
+</body>
+</html>

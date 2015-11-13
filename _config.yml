@@ -5,6 +5,7 @@ permalink: /:title
 markdown: kramdown
 
 highlighter: pygments
+gems: [jekyll-paginate]
 paginate: 8 # pagination based on number of posts
 paginate_path: "page/:num"
 

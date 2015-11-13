@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Game of Throne | Alex</title>
+
+	
+	<meta name="description" content="剖析JavaScript原理，以及this应该避免的坑">
+	
+
+	<meta name="author" content="Alex Yang">
+
+		<!-- Enable responsive viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="/assets/resources/syntax/syntax.css">
+<link rel="stylesheet" type="text/css" href="/assets/resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/resources/font-awesome/css/font-awesome.min.css">
+<link rel="icon" href="../assets/media/favicon.jpg">
+
+<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="/assets/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>
+	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.js"></script>
+
+
+	</head>
+<body>
+
+<nav class="navbar navbar-default visible-xs" role="navigation">
+
+
+ <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarHeaderCollapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a type="button" class="navbar-toggle nav-link" href="http://github.com/yeahyangliu">
+        <i class="fa fa-github"></i>
+      </a>
+      
+      
+       
+      <a type="button" class="navbar-toggle nav-link" href="mailto:yangliualex@gmail.com">
+        <i class="fa fa-envelope"></i>
+      </a>
+      
+
+
+
+      <a class="navbar-brand" href="http://yeahyangliu.github.io">
+        <img src="../assets/media/alex.png" class="img-circle" style="height:35px;width:35px"/>
+        Alex Yang
+      </a>
+    </div>
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbarHeaderCollapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://yeahyangliu.github.io">Home</a></li>
+        <li><a href="http://yeahyangliu.github.io/categories.html">Categories</a></li>
+        <li><a href="http://yeahyangliu.github.io/tags.html">Tags</a></li>
+        <li><a href="http://yeahyangliu.github.io/me.html">About Me</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+</nav>
+
+  <!-- nav-menu-dropdown -->
+  <div class="btn-group hidden-xs" id="nav-menu">
+   <button type="button" class="btn btn-default dropdown-toggle pull-right" data-toggle="dropdown">
+     <i class="fa fa-bars"></i>
+   </button>
+   <ul class="dropdown-menu pull-right" role="menu">
+     <li><a href="http://yeahyangliu.github.io"><i class="fa fa-home"></i> Home</a></li>
+     <li><a href="http://yeahyangliu.github.io/categories.html"><i class="fa fa-folder"></i> Categories</a></li>
+     <li><a href="http://yeahyangliu.github.io/tags.html"><i class="fa fa-tags"></i> Tags</a></li>
+     <li class="divider"></li>
+     <li><a href="#"><i class="fa fa-arrow-up"></i> Top of Page</a></li>
+   </ul>
+ </div>
+
+<div class="col-sm-4 sidebar hidden-xs" id="sidebar">
+		<! -- sidebar.html -->
+<header class="sidebar-header" role="banner">
+    <a href="http://yeahyangliu.github.io">
+        <img src="../assets/media/alex.png" class="img-circle" style="border-radius: 50%;
+border: 3px solid #FFF; height:150px;width:150px"/>
+    </a>
+
+    <h3 class="title">
+        <a href="http://yeahyangliu.github.io/me.html">Alex Yang</a>
+
+        <p style="font-size:20px;">Developer</p>
+    </h3>
+
+    <hr class="hr-line">
+    <h5 class="title">
+        <a type="button" class="social2" id="btnblog" href="http://yeahyangliu.github.io/#blog">
+            <i class="fa"
+            style="letter-spacing:0; position:relative; top:-5px; left: -5px; font-size:20px;font-family:arial,sans-serif">博客</i>
+        </a>
+    </h5>
+
+    <hr class="hr-line1">
+    <h3 class="title" style="font-size:30px;">
+
+        <a type="button" class="social1" href="http://github.com/yeahyangliu">
+            <i class="fa fa-github"></i>
+        </a>
+
+        <a type="button" class="social1" href="https://www.facebook.com/yeahyangliu">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a type="button" class="social1" href="https://cn.linkedin.com/pub/alex-yang/104/7a/147"
+                style="padding-right: 10px">
+            <i class="fa fa-linkedin"></i>
+        </a>
+
+    </h3>
+
+</header>
+
+
+<! -- sidebar.html end -->
+
+	</div>
+
+<div class="col-sm-8 col-sm-offset-4" id="container">
+  
+<div class="page-header">
+  <h1>玩转JavaScript this用法 </h1>
+</div>
+
+<article>
+
+  <div class="col-sm-10">
+   <span class="post-date">
+     
+     January 
+     2nd,
+       
+     2015
+      
+   </span>
+    <div class="article_body" id="article_body">
+    <p><br />
+    在web项目中Javascript是一门必须要掌握的动态语言，基于Javascript的框架大多离不开不了最基础的Javascript的用法和原理。本文主要是总结一下Javascript中那万恶的this关键字。
+开门见山，抛出一个观点：</p>
+
+<blockquote>
+  <p>“Javascript中this永远是指向调用它的对象”。</p>
+
+</blockquote>
+
+<p>下面我会举3个最有代表性的例子来验证我的这个观点。</p>
+
+<h1 id="section">例一 对象方法调用</h1>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kd">function</span> <span class="nx">testThis</span><span class="p">(){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span>
+    <span class="p">}</span> 
+
+    <span class="nx">testThis</span><span class="p">();</span>
+
+    <span class="c1">// 这里声明了一个全局变量x,一个全局方法，这两个对象都绑定在Window上，所以当运行testThis()的结果就是取Window对象上的x成员，结果是1</span>
+    <span class="kd">var</span> <span class="nx">o</span><span class="o">=</span><span class="p">{};</span>
+    <span class="nx">o</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="nx">o</span><span class="p">.</span><span class="nx">method</span> <span class="o">=</span> <span class="nx">testThis</span><span class="p">;</span>
+    <span class="nx">o</span><span class="p">.</span><span class="nx">method</span><span class="p">();</span>
+
+    <span class="c1">// 此时，我们讲o对象的method指向了testThis, 当调用它的时候，this指向调用他的对象，这是x就是去o对象的x，结果是5</span></code></pre></figure>
+
+<p>这个例子十分基础，也就是常见的对象调用方法的时候，方法里面的this就是指向调用他或者是拥有他的对象</p>
+
+<h1 id="section-1">例二 构造函数创建</h1>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="n">var</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>    
+    <span class="n">function</span> <span class="nb">test</span><span class="p">(){</span>
+        <span class="n">this</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">var</span> <span class="n">o</span> <span class="o">=</span> <span class="kp">new</span> <span class="nb">test</span><span class="p">();</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">x</span><span class="p">);</span>  <span class="sr">//</span> <span class="mi">1</span>
+
+    <span class="o">//</span><span class="err">这就是</span><span class="n">javascript</span><span class="err">中的构造函数，通过</span><span class="kp">new</span><span class="err">来创建一个实例，这里取的值是绑定在对象</span><span class="n">o</span><span class="err">里面的</span><span class="n">x</span><span class="p">,</span><span class="err">所以是</span><span class="mi">1</span>
+
+    <span class="o">//</span><span class="err">下面这个例子是</span><span class="no">Angular</span><span class="err">中的</span><span class="no">Service</span><span class="err">，你可以直接理解成他会通过第二个参数</span><span class="kp">new</span><span class="err">一个单例对象</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">service</span><span class="p">(</span><span class="s2">&quot;MyService&quot;</span><span class="p">,</span> <span class="n">function</span> <span class="p">(</span><span class="vg">$http</span><span class="p">,</span> <span class="vg">$modal</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">this</span><span class="o">.</span><span class="n">test</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+               <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+               <span class="n">test2</span><span class="p">();</span>
+         <span class="p">}</span>
+          
+         <span class="n">function</span> <span class="n">test2</span><span class="p">()</span> <span class="p">{</span>
+               <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">this</span><span class="p">)</span>
+         <span class="p">}</span>
+    <span class="p">}</span>        
+
+    <span class="no">MyService</span><span class="o">.</span><span class="n">test</span><span class="p">()</span> <span class="sr">//</span> <span class="err">打印</span> <span class="no">MyService</span> <span class="p">{</span><span class="nb">test</span><span class="p">:</span> <span class="n">function</span><span class="p">}</span> <span class="err">和</span> <span class="no">Window</span> <span class="p">{}</span>
+    <span class="sr">//</span><span class="err">这里</span><span class="n">log</span><span class="err">出来虽然</span><span class="n">test2</span><span class="p">()</span><span class="err">可以被</span><span class="n">test1</span><span class="p">()</span><span class="err">调用，但它其实并不属于</span><span class="no">Service</span><span class="p">,</span> <span class="err">所以如果</span><span class="n">test2</span><span class="err">里面调用</span><span class="n">this</span><span class="p">,</span><span class="err">就会出现常见的错误，哎呀妈呀，咋调不了自己的方法？！</span></code></pre></figure>
+
+<p>这个例子我们项目中经常出现，而且很难解释清楚，就像还有人问我为什么controller中不直接使用this，而是要用$scope来绑定方法和变量，当然用this能够取代部分$scope，但是难免遇到this的上下文不同引起的一系列问题。这个问题的关键就是test2方法并不属于对象Service，但是由于在service闭包(closure)里面，他可以被Service调用，所以test2里面的this就不是指向Service，从而调用Service里面的其他方法就会报错。</p>
+
+<h1 id="this">例三 改变this指向</h1>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="n">function</span> <span class="nb">test</span><span class="p">(){</span>
+        <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">x</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">var</span> <span class="n">o</span><span class="o">=</span><span class="p">{};</span>
+    <span class="n">o</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">o</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="nb">test</span><span class="p">;</span>
+
+    <span class="n">o</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">apply</span><span class="p">({</span><span class="ss">x</span><span class="p">:</span><span class="mi">5</span><span class="p">});</span>   <span class="sr">//</span><span class="mi">5</span>
+    <span class="n">o</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">call</span><span class="p">()</span>  <span class="sr">//</span> <span class="n">undefined</span>
+
+    <span class="sr">//</span><span class="err">通过</span><span class="n">apply</span><span class="o">/</span><span class="n">call</span><span class="err">来指定调用函数的</span><span class="n">this</span><span class="err">作用上下文，都是指用参数对象来调用</span><span class="n">o</span><span class="err">对象的函数，默认参数是</span><span class="no">Global</span></code></pre></figure>
+
+<p>其实通过这个例子，大家就已经可以看到this的指向是不确定的，this值在进入上下文时确定，并且在上下文运行期间永久不变。上面的例子改变this的上下文，导致两次结果不一致也是最好的证据。</p>
+
+<h1 id="section-2">最后</h1>
+
+<p>本文最大的作用就是如果看完本文你能够理解this为什么有时候会跟自己期望不一样，而且能得到一个避免这样问题发生的解决方案，那我的目的就达到了。很幸运你能看到这里，解决方案呈现给大家：就像Angular要将属性和方法给你提供一个$scope来绑定属性，也像coffeeScript会在对象一开头有这么个赋值“ _this = this”，我们在自己的js实践中不妨定义”val self = this”，在之后的作用域里面用self来操作对象的属性，这是解决之道。</p>
+
+    </div>
+
+    
+    <ul class="tag_box list-unstyled list-inline">
+      <li><i class="fa fa-folder-open"></i></li>
+      
+      
+      
+        <li><a href="http://yeahyangliu.github.io/categories.html#前端-ref">
+          前端 <span>(6)</span>
+          
+        </a></li>
+      
+      
+    </ul>
+    
+
+    
+    <ul class="list-inline">
+      <li><i class="fa fa-tags"></i></li>
+      
+      
+      
+        <li>
+          <a href="http://yeahyangliu.github.io/tags.html#JavaScript-ref">
+          JavaScript <span>(3)</span>
+          
+          </a>
+        </li>
+      
+      
+      
+    </ul>
+    
+
+    <hr>
+
+    <div>
+      <section class="share col-sm-6">
+        <h4 class="section-title">Share Post</h4>
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=玩转JavaScript this用法"
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <i class="fa fa-weixin fa-lg"></i>
+          Wechat
+        </a>
+        <a class="btn btn-default btn-sm facebook" href="https://www.facebook.com/sharer/sharer.php"
+           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          <i class="fa fa-facebook fa-lg"></i>
+          Facebook
+        </a>
+        <a class="btn btn-default btn-sm gplus"
+           onclick="window.open('https://plus.google.com/share?url='+window.location.href, 'google-plus-share', 'width=490,height=530');return false;">
+          <i class="fa fa-google-plus fa-lg"></i>
+          Google+
+        </a>
+      </section>
+
+      <section class="col-sm-6 author">
+        <img src="../assets/media/alex.png" style="height:100px;width:100px;" class="img-rounded author-image" />
+        <h4 class="section-title author-name"><b>Alex Yang</b><br/><p style="color:#888;font-size:13px;">Developer</p></h4>
+        <p class="author-bio">任何编程语言中都没有什么魔法或者万灵丹药，使其使用者成为好的程序员</p>
+      </section>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <ul class="pager">
+      
+      <li class="previous"><a href="http://yeahyangliu.github.io/javascript-module-pattern" title="玩转JavaScript module pattern精髓">&larr; 上一篇</a></li>
+      
+      
+      <li class="next"><a href="http://yeahyangliu.github.io/%E7%8E%A9%E8%BD%AC-javascript-callback%E5%87%BD%E6%95%B0" title="玩转JavaScript Callback函数">下一篇 &rarr;</a></li>
+      
+    </ul>
+
+  </div>
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2063602"></script>
+    <!-- UY END -->
+
+</article>
+<div class="clearfix"></div>
+
+
+<footer class="navbar navbar-default">
+    <div class="container">
+      <p class="navbar-text pull-left">Some rights reserved &copy; 2015 Alex Yang. </br>
+      想加入ThoughtWorks请将简历发送至 <a class="navbar-button" href="http://gmail.google.com/">liuyang@thoughtworks.com</a></p>
+ </div>
+  </footer>
+</div>
+
+</body>
+</html>

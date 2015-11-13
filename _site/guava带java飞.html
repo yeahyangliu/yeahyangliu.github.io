@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Game of Throne | Alex</title>
+
+	
+	<meta name="description" content="Google出品的Guava给冗余的Java带来一些函数式的清风">
+	
+
+	<meta name="author" content="Alex Yang">
+
+		<!-- Enable responsive viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="/assets/resources/syntax/syntax.css">
+<link rel="stylesheet" type="text/css" href="/assets/resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/resources/font-awesome/css/font-awesome.min.css">
+<link rel="icon" href="../assets/media/favicon.jpg">
+
+<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="/assets/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>
+	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.js"></script>
+
+
+	</head>
+<body>
+
+<nav class="navbar navbar-default visible-xs" role="navigation">
+
+
+ <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarHeaderCollapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a type="button" class="navbar-toggle nav-link" href="http://github.com/yeahyangliu">
+        <i class="fa fa-github"></i>
+      </a>
+      
+      
+       
+      <a type="button" class="navbar-toggle nav-link" href="mailto:yangliualex@gmail.com">
+        <i class="fa fa-envelope"></i>
+      </a>
+      
+
+
+
+      <a class="navbar-brand" href="http://yeahyangliu.github.io">
+        <img src="../assets/media/alex.png" class="img-circle" style="height:35px;width:35px"/>
+        Alex Yang
+      </a>
+    </div>
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbarHeaderCollapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://yeahyangliu.github.io">Home</a></li>
+        <li><a href="http://yeahyangliu.github.io/categories.html">Categories</a></li>
+        <li><a href="http://yeahyangliu.github.io/tags.html">Tags</a></li>
+        <li><a href="http://yeahyangliu.github.io/me.html">About Me</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+</nav>
+
+  <!-- nav-menu-dropdown -->
+  <div class="btn-group hidden-xs" id="nav-menu">
+   <button type="button" class="btn btn-default dropdown-toggle pull-right" data-toggle="dropdown">
+     <i class="fa fa-bars"></i>
+   </button>
+   <ul class="dropdown-menu pull-right" role="menu">
+     <li><a href="http://yeahyangliu.github.io"><i class="fa fa-home"></i> Home</a></li>
+     <li><a href="http://yeahyangliu.github.io/categories.html"><i class="fa fa-folder"></i> Categories</a></li>
+     <li><a href="http://yeahyangliu.github.io/tags.html"><i class="fa fa-tags"></i> Tags</a></li>
+     <li class="divider"></li>
+     <li><a href="#"><i class="fa fa-arrow-up"></i> Top of Page</a></li>
+   </ul>
+ </div>
+
+<div class="col-sm-4 sidebar hidden-xs" id="sidebar">
+		<! -- sidebar.html -->
+<header class="sidebar-header" role="banner">
+    <a href="http://yeahyangliu.github.io">
+        <img src="../assets/media/alex.png" class="img-circle" style="border-radius: 50%;
+border: 3px solid #FFF; height:150px;width:150px"/>
+    </a>
+
+    <h3 class="title">
+        <a href="http://yeahyangliu.github.io/me.html">Alex Yang</a>
+
+        <p style="font-size:20px;">Developer</p>
+    </h3>
+
+    <hr class="hr-line">
+    <h5 class="title">
+        <a type="button" class="social2" id="btnblog" href="http://yeahyangliu.github.io/#blog">
+            <i class="fa"
+            style="letter-spacing:0; position:relative; top:-5px; left: -5px; font-size:20px;font-family:arial,sans-serif">博客</i>
+        </a>
+    </h5>
+
+    <hr class="hr-line1">
+    <h3 class="title" style="font-size:30px;">
+
+        <a type="button" class="social1" href="http://github.com/yeahyangliu">
+            <i class="fa fa-github"></i>
+        </a>
+
+        <a type="button" class="social1" href="https://www.facebook.com/yeahyangliu">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a type="button" class="social1" href="https://cn.linkedin.com/pub/alex-yang/104/7a/147"
+                style="padding-right: 10px">
+            <i class="fa fa-linkedin"></i>
+        </a>
+
+    </h3>
+
+</header>
+
+
+<! -- sidebar.html end -->
+
+	</div>
+
+<div class="col-sm-8 col-sm-offset-4" id="container">
+  
+<div class="page-header">
+  <h1>Guava带Java飞 </h1>
+</div>
+
+<article>
+
+  <div class="col-sm-10">
+   <span class="post-date">
+     
+     April 
+     17th,
+     
+     2013
+      
+   </span>
+    <div class="article_body" id="article_body">
+    <p><br /></p>
+
+<p>Guava的前身是Google Collections，是Google开发出的一个开源Java常用类库，包含了一些集合的便捷操作API。本文通过一些常用的例子来剖析Guava的奇妙之处。</p>
+
+<p>Guava是如何简化Java的for循环的呢，直接上一段例子来说明:</p>
+
+<p>如果想要将一个字符数组中字符的元素剔除并且用逗号隔开，原始做法：</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java">    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">){</span>
+           <span class="n">result</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]).</span><span class="na">append</span><span class="o">(</span><span class="sc">&#39;,&#39;</span><span class="o">);</span>
+       <span class="o">}</span>
+    <span class="o">}</span></code></pre></figure>
+
+<p>Guava类库极度简化次操作，以一种函数式编程思想链式的调用方法简化了实现</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java">    <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">Joiner</span><span class="o">.</span><span class="na">on</span><span class="o">(</span><span class="err">“</span><span class="o">,</span><span class="err">”</span><span class="o">).</span><span class="na">skipNulls</span><span class="o">().</span><span class="na">join</span><span class="o">(</span><span class="n">array</span><span class="o">);</span></code></pre></figure>
+
+<p>Guava还有比着这强大的功能，闲话少说，下面介绍三种项目常用简化for循环的用法：</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java">     <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">dogs</span> <span class="o">=</span> <span class="n">ImmutableList</span><span class="o">.</span><span class="na">of</span><span class="o">(</span>
+                <span class="k">new</span> <span class="nf">Dog</span><span class="o">(</span><span class="s">&quot;Jeff&quot;</span><span class="o">,</span> <span class="mf">0.6f</span><span class="o">,</span> <span class="n">MALE</span><span class="o">,</span> <span class="k">new</span> <span class="nf">DateTime</span><span class="o">(</span><span class="mi">2013</span><span class="o">,</span> <span class="mi">9</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">)),</span>
+                <span class="k">new</span> <span class="nf">Dog</span><span class="o">(</span><span class="s">&quot;Vivian&quot;</span><span class="o">,</span> <span class="mi">1</span><span class="n">f</span><span class="o">,</span> <span class="n">FEMALE</span><span class="o">,</span> <span class="k">new</span> <span class="nf">DateTime</span><span class="o">(</span><span class="mi">2013</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">)));</span><span class="c1">//初始化数据</span></code></pre></figure>
+
+<p><br /></p>
+
+<p>1.将一个集合元素的某一个或多个字段组成一个新的集合：</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java">     <span class="kd">public</span> <span class="n">Collection</span> <span class="n">getNameList</span> <span class="o">{</span>
+             <span class="k">return</span> <span class="n">Collections2</span><span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="n">dogs</span><span class="o">,</span> <span class="k">new</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;()</span> <span class="o">{</span>
+                 <span class="nd">@Override</span>
+                 <span class="kd">public</span> <span class="n">String</span> <span class="nf">apply</span><span class="o">(</span><span class="n">Dog</span> <span class="n">dog</span><span class="o">)</span> <span class="o">{</span>
+                     <span class="k">return</span> <span class="n">dog</span><span class="o">.</span><span class="na">getName</span><span class="o">();</span>
+                 <span class="o">}</span>
+             <span class="o">});</span>
+         <span class="o">}</span></code></pre></figure>
+
+<p>用法：可以将集合里的每个对象拿出来对其进行操作，并将操作结果作为新集合的元素，返回产生的新集合。</p>
+
+<p><br /></p>
+
+<p>2.筛选出集合中满足某些属性的对象</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java">    <span class="kd">public</span> <span class="n">Collection</span> <span class="nf">applyAge</span><span class="o">(</span><span class="kd">final</span> <span class="kt">float</span> <span class="n">from</span><span class="o">,</span> <span class="kd">final</span> <span class="kt">float</span> <span class="n">to</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">Collections2</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">dogs</span><span class="o">,</span> <span class="k">new</span> <span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;()</span> <span class="o">{</span>
+                <span class="nd">@Override</span>
+                <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">apply</span><span class="o">(</span><span class="n">Dog</span> <span class="n">dog</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="k">return</span> <span class="n">dog</span><span class="o">.</span><span class="na">getAge</span><span class="o">()</span> <span class="o">&gt;</span> <span class="n">from</span> <span class="o">&amp;&amp;</span> <span class="n">dog</span><span class="o">.</span><span class="na">getAge</span><span class="o">()</span> <span class="o">&lt;</span> <span class="n">to</span><span class="o">;</span>
+                <span class="o">}</span>
+            <span class="o">});</span>
+
+        <span class="o">}</span></code></pre></figure>
+
+<p>用法：在集合中找出满足某个条件的所有元素，返回一个满足条件的新集合</p>
+
+<p><br /></p>
+
+<p>3.在集合中找到一个满足条件的对象</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java">    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">getBirthdayApplyMonthDog</span><span class="o">(</span><span class="kd">final</span> <span class="kt">int</span> <span class="n">month</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">Optional</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">optional</span> <span class="o">=</span> <span class="n">Iterables</span><span class="o">.</span><span class="na">tryFind</span><span class="o">(</span><span class="n">dogs</span><span class="o">,</span> <span class="k">new</span> <span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;()</span> <span class="o">{</span>
+                <span class="nd">@Override</span>
+                <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">apply</span><span class="o">(</span><span class="n">Dog</span> <span class="n">dog</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="k">return</span> <span class="n">dog</span><span class="o">.</span><span class="na">getBirthday</span><span class="o">().</span><span class="na">getMonthOfYear</span><span class="o">()</span> <span class="o">==</span> <span class="n">month</span><span class="o">;</span>
+                <span class="o">}</span>
+            <span class="o">});</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">optional</span><span class="o">.</span><span class="na">isPresent</span><span class="o">())</span> <span class="o">{</span>
+                <span class="k">return</span> <span class="n">optional</span><span class="o">;</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="k">return</span> <span class="s">&quot;not found&quot;</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span></code></pre></figure>
+
+<p>用法：在集合中找到第一个满足条件的元素，并且返回一个被Optional封装的对象，Optional对象可以避免开发人员没有判断是否为null而产生的空指针异常,是Guava提供用来包装任何对象的对象。</p>
+
+<p><br /></p>
+
+<p>4.在2和3的实例中，tryFind和filter方法都需要传一个Predicate的对象，这个对象是用来判断哪些符合条件的一个借口，需要自己实现，与此同时，Guava也提供了能够让多个条件并列或者同时满足的条件组合方法</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java">    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">getFirstDogAppluAgeAndGender</span><span class="o">(</span><span class="kt">float</span> <span class="n">age</span><span class="o">,</span> <span class="n">String</span> <span class="n">gender</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">Optional</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">optional</span> <span class="o">=</span> <span class="n">Iterables</span><span class="o">.</span><span class="na">tryFind</span><span class="o">(</span><span class="n">dogs</span><span class="o">,</span> <span class="n">and</span><span class="o">(</span><span class="n">getApplyAge</span><span class="o">(</span><span class="n">age</span><span class="o">),</span> <span class="n">applyGenderDog</span><span class="o">(</span><span class="n">gender</span><span class="o">)));</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">optional</span><span class="o">.</span><span class="na">isPresent</span><span class="o">())</span> <span class="o">{</span>
+                <span class="k">return</span> <span class="n">optional</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+            <span class="o">}</span>
+            <span class="k">return</span> <span class="n">Optional</span><span class="o">.</span><span class="na">absent</span><span class="o">();</span>
+        <span class="o">}</span>
+
+        <span class="kd">private</span> <span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="nf">getApplyAge</span><span class="o">(</span><span class="kd">final</span> <span class="kt">float</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;()</span> <span class="o">{</span>
+                <span class="nd">@Override</span>
+                <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">apply</span><span class="o">(</span><span class="n">Dog</span> <span class="n">dog</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="k">return</span> <span class="n">dog</span><span class="o">.</span><span class="na">getAge</span><span class="o">()</span> <span class="o">&gt;</span> <span class="n">age</span><span class="o">;</span>
+                <span class="o">}</span>
+            <span class="o">};</span>
+        <span class="o">}</span></code></pre></figure>
+
+<p>用法：提供了 and（or）方法来组合一个判断条件，丰富了tryFind和filter的判断条件逻辑。</p>
+
+<p><br /></p>
+
+<p>总而言之，Guava给for循环带来了飞跃性的改进，让糟糕的for与if,else的冗余组合变得简单易懂，让代码变得更优美，可读性更高，确实值得所有java开发者的学习和亲睐。</p>
+
+    </div>
+
+    
+    <ul class="tag_box list-unstyled list-inline">
+      <li><i class="fa fa-folder-open"></i></li>
+      
+      
+      
+        <li><a href="http://yeahyangliu.github.io/categories.html#后端-ref">
+          后端 <span>(2)</span>
+          
+        </a></li>
+      
+      
+    </ul>
+    
+
+    
+    <ul class="list-inline">
+      <li><i class="fa fa-tags"></i></li>
+      
+      
+      
+        <li>
+          <a href="http://yeahyangliu.github.io/tags.html#Java-ref">
+          Java <span>(2)</span>
+          
+          </a>
+        </li>
+      
+      
+      
+    </ul>
+    
+
+    <hr>
+
+    <div>
+      <section class="share col-sm-6">
+        <h4 class="section-title">Share Post</h4>
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Guava带Java飞"
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <i class="fa fa-weixin fa-lg"></i>
+          Wechat
+        </a>
+        <a class="btn btn-default btn-sm facebook" href="https://www.facebook.com/sharer/sharer.php"
+           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          <i class="fa fa-facebook fa-lg"></i>
+          Facebook
+        </a>
+        <a class="btn btn-default btn-sm gplus"
+           onclick="window.open('https://plus.google.com/share?url='+window.location.href, 'google-plus-share', 'width=490,height=530');return false;">
+          <i class="fa fa-google-plus fa-lg"></i>
+          Google+
+        </a>
+      </section>
+
+      <section class="col-sm-6 author">
+        <img src="../assets/media/alex.png" style="height:100px;width:100px;" class="img-rounded author-image" />
+        <h4 class="section-title author-name"><b>Alex Yang</b><br/><p style="color:#888;font-size:13px;">Developer</p></h4>
+        <p class="author-bio">任何编程语言中都没有什么魔法或者万灵丹药，使其使用者成为好的程序员</p>
+      </section>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <ul class="pager">
+      
+      <li class="previous disabled"><a>&larr; 上一篇</a></li>
+      
+      
+      <li class="next"><a href="http://yeahyangliu.github.io/%E7%8A%B6%E6%80%81%E6%9C%BA%E5%AE%9E%E6%88%98" title="状态机实战">下一篇 &rarr;</a></li>
+      
+    </ul>
+
+  </div>
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2063602"></script>
+    <!-- UY END -->
+
+</article>
+<div class="clearfix"></div>
+
+
+<footer class="navbar navbar-default">
+    <div class="container">
+      <p class="navbar-text pull-left">Some rights reserved &copy; 2015 Alex Yang. </br>
+      想加入ThoughtWorks请将简历发送至 <a class="navbar-button" href="http://gmail.google.com/">liuyang@thoughtworks.com</a></p>
+ </div>
+  </footer>
+</div>
+
+</body>
+</html>
