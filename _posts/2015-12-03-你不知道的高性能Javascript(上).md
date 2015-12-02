@@ -59,17 +59,17 @@ tags: [JavaScript]
 浏览器下载完HTMl，CSS，JS后会生成两棵树：DOM树和渲染树。
 当Dom的几何属性发生变化时，比如Dom的宽高，或者颜色，position，浏览器需要重新计算元素的几何属性，并且重新构建渲染树，这个过程称之为重绘重排。
 {% highlight javascript %}
-     bodystyle = document.body.style;
-    bodystyle.color = red;
-    bodystyle.height = 1000px;
-    bodystyke.width = 100%;
+    bodystyle = document.body.style;
+bodystyle.color = red;
+bodystyle.height = 1000px;
+bodystyke.width = 100%;
 
 {% endhighlight %}
 上述方式修改三个属性，浏览器会进行三次重排重绘，在某些情况下，减少这种重排可以提高浏览器渲染性能。
 推荐方式如下，只进行一次操作，完成三个步骤：
 {% highlight javascript %}
      bodystyle = document.body.style;
-    bodystyle.cssText 'color:red;height:1000px;width:100%';
+bodystyle.cssText 'color:red;height:1000px;width:100%';
 
 {% endhighlight %}
 
@@ -90,6 +90,10 @@ IE8，Firefox3.5，Chrome2都允许必行下载JavaScript文件。所以`<script
 
     //压缩后变成
 
-    var a = "foobar"
+var a = "foobar"
 
 {% endhighlight %}
+
+#总结
+
+当然，高效的JS不仅仅只有这些可以改进的地方，如果能够减少一些性能的损耗，我们就能更高效的使用JavaScript进行开发了。
