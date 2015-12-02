@@ -59,7 +59,7 @@ tags: [JavaScript]
 浏览器下载完HTMl，CSS，JS后会生成两棵树：DOM树和渲染树。
 当Dom的几何属性发生变化时，比如Dom的宽高，或者颜色，position，浏览器需要重新计算元素的几何属性，并且重新构建渲染树，这个过程称之为重绘重排。
 {% highlight javascript %}
-    bodystyle = document.body.style;
+     bodystyle = document.body.style;
     bodystyle.color = red;
     bodystyle.height = 1000px;
     bodystyke.width = 100%;
@@ -68,20 +68,20 @@ tags: [JavaScript]
 上述方式修改三个属性，浏览器会进行三次重排重绘，在某些情况下，减少这种重排可以提高浏览器渲染性能。
 推荐方式如下，只进行一次操作，完成三个步骤：
 {% highlight javascript %}
-    bodystyle = document.body.style;
+     bodystyle = document.body.style;
     bodystyle.cssText 'color:red;height:1000px;width:100%';
 
 {% endhighlight %}
 
 #JavaScript加载
 
-IE8，Firefox3.5，Chrome2都允许必行下载JavaScript文件。所以<script>不会阻塞其他标签下载。
+IE8，Firefox3.5，Chrome2都允许必行下载JavaScript文件。所以`<script>`不会阻塞其他标签下载。
 遗憾的是，JS下载过程依然会阻塞其他资源的下载，比如图片。尽管最新的浏览器通过允许并行下载提高了性能，但是脚本阻塞任然是一个问题。
-因此，推荐将所有的<script>标签放在<body>标签的底部，以尽量减少对整个页面渲染的影响，避免用户看到一片空白
+因此，推荐将所有的`<script>`标签放在`<body>`标签的底部，以尽量减少对整个页面渲染的影响，避免用户看到一片空白
 
 #JS文件高性能部署
 
-既然大家已经知道多个<script>标签会影响页面渲染速度，那么就不难理解“减少页面渲染所需的HTTP”是网站提速的一条经典法则。
+既然大家已经知道多个`<script>`标签会影响页面渲染速度，那么就不难理解“减少页面渲染所需的HTTP”是网站提速的一条经典法则。
 所以，在产品环境下合并所有的JS文件会减少请求数，从而加快页面渲染速度。
 除了合并JS文件，我们还可以压缩JS文件。压缩是指将文件中与运行无关的部分进行剥离。剥离内容包括空白字符，和注释。改过程通常可以将文件大小减半。
 还有一些压缩工具会将局部变量的长度减小，比如：
