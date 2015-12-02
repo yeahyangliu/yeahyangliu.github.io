@@ -6,7 +6,7 @@ categories: [前端]
 tags: [JavaScript]
 
 ---
-![pseudo](/assets/image/高性能JS上.jpg)
+![pseudo](/assets/image/effective-js-01.jpg)
 
 <br/>
 想必大家都知道，JavaScrip是全栈开发语言，浏览器，手机，服务器端都可以看到JS的身影。
