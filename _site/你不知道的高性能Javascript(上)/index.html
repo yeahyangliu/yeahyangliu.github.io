@@ -135,7 +135,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 <div class="col-sm-8 col-sm-offset-4" id="container">
   
 <div class="page-header">
-  <h1>你不知道的10种高性能Javascript（上） </h1>
+  <h1>你不知道的高性能Javascript </h1>
 </div>
 
 <article>
@@ -158,30 +158,78 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 
 <h1 id="section">数据存储</h1>
 
-<p>可能大家已经开始困惑了，什么是无用的DOM，为什么不存在的元素却能够让显示发生变化。OK，我们先从用法开始讲起。</p>
+<p>计算机学科中有一个经典问题是通过改变数据存储的位置来获得最佳的读写性能，在JavaScript中，数据存储的位置会对代码性能产生重大影响。
+ - 能使用{}创建对象就不要使用new Object，能使用[]创建数组就不要使用new Array。JS中字面量的访问速度要高于对象。
+ - 变量在作用域链中的位置越深，访问所需实践越长。对于这种变量，可以通过缓存使用局部变量保存起来，减少对作用域链访问次数
+ - 使用点表示法（object.name）和操作符（object[name]）操作并没有太多区别，只有Safari会有区别，点始终更快</p>
 
-<p><code>:before</code>， <code>:after</code>用法十分简单，它的作用是在元素前后插入新的内容，必须有content属性，外加一些样式。比如：</p>
+<h1 id="section-1">循环</h1>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">div</span><span class="o">:</span><span class="nx">before</span> <span class="p">{</span>
-        <span class="nx">content</span><span class="o">:</span> <span class="nx">open</span><span class="o">-</span><span class="nx">quote</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nx">div</span><span class="o">:</span><span class="nx">after</span> <span class="p">{</span>
-        <span class="nx">content</span><span class="o">:</span> <span class="nx">open</span><span class="o">-</span><span class="nx">quote</span><span class="p">;</span>
-    <span class="p">}</span>
+<p>在JS中常见的循环有下面几种：</p>
 
-    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">Alex</span><span class="o">&lt;</span><span class="err">/div&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// do something}</span>
 
-<p>你会看到“This is Alex”，前后两个引号就是通过before和after添加上去的，如果你审查元素，你会发现DOM中找不到这两个引号的HTML。</p>
+ <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">prop</span> <span class="k">in</span> <span class="nx">object</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// for loop object}</span>
 
-<p>伪元素一般用于改变它们的前景颜色，增加背景色/图，调整字体大小，调整对齐方式等等。那么对于上图而言，我们可以采用两种方式实现：</p>
+ <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">].</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">array</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 基于函数的循环})</span></code></pre></div>
 
-<ul>
-  <li>使用两个div，一个放背景图，一个放黑色背景，然后让两个重叠，产生这种效果</li>
-  <li>使用一个黑色背景，然后使用伪元素，把图片背景添加上去</li>
-</ul>
+<p>毋庸质疑，第一种方式是原生的，性能消耗最低的，速度也最快。第二种方式for-in每次迭代都回产生更多的开销（局部变量），它的速度只有第一种的1/7
+第三种方式明显提供了更便利的循环方式，但是他的速度只有普通循环的1/8。所以可以根据自己项目情况，选择合适的循环方式。</p>
 
-<p>如果你能还不能知道如何使用着两种方案实现这样的效果，<a href="https://jsfiddle.net/Alex___Yang/g0o1u6nb/1/">可以参考我的做法</a>。
-对于这两种方案，你是否有自己的看法呢，很明显，第一种做法会有一些没有意义的HTML，像这种时候，我们就该考虑使用伪元素啦。</p>
+<h1 id="section-2">事件委托</h1>
+
+<p>试想一下页面上每一个<a>添加一个事件，我们会不会给每一个标签都添加一个onClick呢。
+当页面中存在大量元素都需要绑定同一个事件处理的时候，这种情况可能会影响性能。每绑定一个事件都加重了页面或者是运行期间的负担。对于一个富前端的应用，交互重的页面上，过多的绑定会占用过多内存。
+一个简单优雅的方式就是事件委托。它是基于事件的工作流：逐层捕获，到达目标，逐层冒泡。既然事件存在冒泡机制，那么我们可以通过给外层绑定事件，来处理所有的子元素出发的事件。</a></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">e</span> <span class="o">=</span> <span class="nx">e</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">;</span>
+
+        <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span> <span class="o">||</span> <span class="nx">e</span><span class="p">.</span><span class="nx">srcElement</span><span class="p">;</span>
+
+        <span class="c1">//如果不是 A标签，我就退出</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">target</span><span class="p">.</span><span class="nx">nodeNmae</span> <span class="o">!===</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+
+        <span class="c1">//打印A的链接地址</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">target</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span>
+    <span class="p">}</span></code></pre></div>
+
+<h1 id="section-3">重绘与重排</h1>
+
+<p>浏览器下载完HTMl，CSS，JS后会生成两棵树：DOM树和渲染树。
+当Dom的几何属性发生变化时，比如Dom的宽高，或者颜色，position，浏览器需要重新计算元素的几何属性，并且重新构建渲染树，这个过程称之为重绘重排。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">bodystyle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">;</span>
+    <span class="nx">bodystyle</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">red</span><span class="p">;</span>
+    <span class="nx">bodystyle</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mi">1000</span><span class="nx">px</span><span class="p">;</span>
+    <span class="nx">bodystyke</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span></code></pre></div>
+
+<p>上述方式修改三个属性，浏览器会进行三次重排重绘，在某些情况下，减少这种重排可以提高浏览器渲染性能。
+推荐方式如下，只进行一次操作，完成三个步骤：</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">bodystyle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">;</span>
+    <span class="nx">bodystyle</span><span class="p">.</span><span class="nx">cssText</span> <span class="s1">&#39;color:red;height:1000px;width:100%&#39;</span><span class="p">;</span></code></pre></div>
+
+<h1 id="javascript">JavaScript加载</h1>
+
+<p>IE8，Firefox3.5，Chrome2都允许必行下载JavaScript文件。所以<script>不会阻塞其他标签下载。
+遗憾的是，JS下载过程依然会阻塞其他资源的下载，比如图片。尽管最新的浏览器通过允许并行下载提高了性能，但是脚本阻塞任然是一个问题。
+因此，推荐将所有的<script>标签放在&lt;body&gt;标签的底部，以尽量减少对整个页面渲染的影响，避免用户看到一片空白</script></script></p>
+
+<h1 id="js">JS文件高性能部署</h1>
+
+<p>既然大家已经知道多个<script>标签会影响页面渲染速度，那么就不难理解“减少页面渲染所需的HTTP”是网站提速的一条经典法则。
+所以，在产品环境下合并所有的JS文件会减少请求数，从而加快页面渲染速度。
+除了合并JS文件，我们还可以压缩JS文件。压缩是指将文件中与运行无关的部分进行剥离。剥离内容包括空白字符，和注释。改过程通常可以将文件大小减半。
+还有一些压缩工具会将局部变量的长度减小，比如：</script></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myName</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span> <span class="o">+</span> <span class="s2">&quot;bar&quot;</span><span class="err">）</span>
+
+    <span class="c1">//压缩后变成</span>
+
+    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="s2">&quot;foobar&quot;</span></code></pre></div>
 
 
     </div>
@@ -224,7 +272,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
     <div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=你不知道的10种高性能Javascript（上）"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=你不知道的高性能Javascript"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-weixin fa-lg"></i>
           Wechat
