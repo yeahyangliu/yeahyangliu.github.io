@@ -178,9 +178,9 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 
 <h1 id="section-2">事件委托</h1>
 
-<p>试想一下页面上每一个<a>添加一个事件，我们会不会给每一个标签都添加一个onClick呢。
+<p>试想一下页面上每一个A标签添加一个事件，我们会不会给每一个标签都添加一个onClick呢。
 当页面中存在大量元素都需要绑定同一个事件处理的时候，这种情况可能会影响性能。每绑定一个事件都加重了页面或者是运行期间的负担。对于一个富前端的应用，交互重的页面上，过多的绑定会占用过多内存。
-一个简单优雅的方式就是事件委托。它是基于事件的工作流：逐层捕获，到达目标，逐层冒泡。既然事件存在冒泡机制，那么我们可以通过给外层绑定事件，来处理所有的子元素出发的事件。</a></p>
+一个简单优雅的方式就是事件委托。它是基于事件的工作流：逐层捕获，到达目标，逐层冒泡。既然事件存在冒泡机制，那么我们可以通过给外层绑定事件，来处理所有的子元素出发的事件。</p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">e</span> <span class="o">=</span> <span class="nx">e</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">;</span>
