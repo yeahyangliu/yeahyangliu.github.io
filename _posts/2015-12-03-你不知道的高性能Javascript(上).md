@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 你不知道的高性能Javascript
-description: 10种高性能最佳实践
+description: 7种高性能最佳实践
 categories: [前端]
 tags: [JavaScript]
 
@@ -86,13 +86,19 @@ IE8，Firefox3.5，Chrome2都允许必行下载JavaScript文件。所以`<script
 除了合并JS文件，我们还可以压缩JS文件。压缩是指将文件中与运行无关的部分进行剥离。剥离内容包括空白字符，和注释。改过程通常可以将文件大小减半。
 还有一些压缩工具会将局部变量的长度减小，比如：
 {% highlight javascript %}
-    var myName = "foo" + "bar"）
+    var myName = "foo" + "bar";
 
     //压缩后变成
 
-var a = "foobar"
+var a = "foobar";
 
 {% endhighlight %}
+
+#缓存JS文件
+
+缓存HTTP组件能极大提高网站回访的用户体验。Web服务器通过“Expires HTTP响应头”来告诉客户端一个资源应该缓存多长时间。当然，缓存也有自己的缺陷：
+当应用升级时，你需要确保用户下载到最新的静态内容。这个问题可以通过改变静态资源的文件名来解决。
+你可能在产品环境看到浏览器引用js`application-20151123201212.js`，这种就是以时间戳的方式保存新的JS文件，从而解决缓存不更新问题。
 
 #总结
 

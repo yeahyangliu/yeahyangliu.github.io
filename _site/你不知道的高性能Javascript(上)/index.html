@@ -5,7 +5,7 @@
 		<title>Game of Throne | Alex</title>
 
 	
-	<meta name="description" content="10种高性能最佳实践">
+	<meta name="description" content="6种高性能最佳实践">
 	
 
 	<meta name="author" content="Alex Yang">
@@ -202,35 +202,44 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 当Dom的几何属性发生变化时，比如Dom的宽高，或者颜色，position，浏览器需要重新计算元素的几何属性，并且重新构建渲染树，这个过程称之为重绘重排。</p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">bodystyle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">;</span>
-    <span class="nx">bodystyle</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">red</span><span class="p">;</span>
-    <span class="nx">bodystyle</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mi">1000</span><span class="nx">px</span><span class="p">;</span>
-    <span class="nx">bodystyke</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span></code></pre></div>
+<span class="nx">bodystyle</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">red</span><span class="p">;</span>
+<span class="nx">bodystyle</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mi">1000</span><span class="nx">px</span><span class="p">;</span>
+<span class="nx">bodystyke</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span></code></pre></div>
 
 <p>上述方式修改三个属性，浏览器会进行三次重排重绘，在某些情况下，减少这种重排可以提高浏览器渲染性能。
 推荐方式如下，只进行一次操作，完成三个步骤：</p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">bodystyle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">;</span>
-    <span class="nx">bodystyle</span><span class="p">.</span><span class="nx">cssText</span> <span class="s1">&#39;color:red;height:1000px;width:100%&#39;</span><span class="p">;</span></code></pre></div>
+<span class="nx">bodystyle</span><span class="p">.</span><span class="nx">cssText</span> <span class="s1">&#39;color:red;height:1000px;width:100%&#39;</span><span class="p">;</span></code></pre></div>
 
 <h1 id="javascript">JavaScript加载</h1>
 
-<p>IE8，Firefox3.5，Chrome2都允许必行下载JavaScript文件。所以<script>不会阻塞其他标签下载。
+<p>IE8，Firefox3.5，Chrome2都允许必行下载JavaScript文件。所以<code>&lt;script&gt;</code>不会阻塞其他标签下载。
 遗憾的是，JS下载过程依然会阻塞其他资源的下载，比如图片。尽管最新的浏览器通过允许并行下载提高了性能，但是脚本阻塞任然是一个问题。
-因此，推荐将所有的<script>标签放在&lt;body&gt;标签的底部，以尽量减少对整个页面渲染的影响，避免用户看到一片空白</script></script></p>
+因此，推荐将所有的<code>&lt;script&gt;</code>标签放在<code>&lt;body&gt;</code>标签的底部，以尽量减少对整个页面渲染的影响，避免用户看到一片空白</p>
 
 <h1 id="js">JS文件高性能部署</h1>
 
-<p>既然大家已经知道多个<script>标签会影响页面渲染速度，那么就不难理解“减少页面渲染所需的HTTP”是网站提速的一条经典法则。
+<p>既然大家已经知道多个<code>&lt;script&gt;</code>标签会影响页面渲染速度，那么就不难理解“减少页面渲染所需的HTTP”是网站提速的一条经典法则。
 所以，在产品环境下合并所有的JS文件会减少请求数，从而加快页面渲染速度。
 除了合并JS文件，我们还可以压缩JS文件。压缩是指将文件中与运行无关的部分进行剥离。剥离内容包括空白字符，和注释。改过程通常可以将文件大小减半。
-还有一些压缩工具会将局部变量的长度减小，比如：</script></p>
+还有一些压缩工具会将局部变量的长度减小，比如：</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myName</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span> <span class="o">+</span> <span class="s2">&quot;bar&quot;</span><span class="err">）</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myName</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span> <span class="o">+</span> <span class="s2">&quot;bar&quot;</span><span class="p">;</span>
 
     <span class="c1">//压缩后变成</span>
 
-    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="s2">&quot;foobar&quot;</span></code></pre></div>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="s2">&quot;foobar&quot;</span><span class="p">;</span></code></pre></div>
 
+<h1 id="js-1">缓存JS文件</h1>
+
+<p>缓存HTTP组件能极大提高网站回访的用户体验。Web服务器通过“Expires HTTP响应头”来告诉客户端一个资源应该缓存多长时间。当然，缓存也有自己的缺陷：
+当应用升级时，你需要确保用户下载到最新的静态内容。这个问题可以通过改变静态资源的文件名来解决。
+你可能在产品环境看到浏览器引用js<code>application-20151123201212.js</code>，这种就是以时间戳的方式保存新的JS文件，从而解决缓存不更新问题。</p>
+
+<h1 id="section-4">总结</h1>
+
+<p>当然，高效的JS不仅仅只有这些可以改进的地方，如果能够减少一些性能的损耗，我们就能更高效的使用JavaScript进行开发了。</p>
 
     </div>
 
