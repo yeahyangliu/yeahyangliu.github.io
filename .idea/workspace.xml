@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/image/VariableScope.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories.html" afterPath="$PROJECT_DIR$/_site/categories.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/CSS玩转Position/index.html" afterPath="$PROJECT_DIR$/_site/CSS玩转Position/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/CSS玩转伪元素/index.html" afterPath="$PROJECT_DIR$/_site/CSS玩转伪元素/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/Guava带Java飞/index.html" afterPath="$PROJECT_DIR$/_site/Guava带Java飞/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/Web前端开发概述/index.html" afterPath="$PROJECT_DIR$/_site/Web前端开发概述/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/javascript-module-pattern/index.html" afterPath="$PROJECT_DIR$/_site/javascript-module-pattern/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/page/2/index.html" afterPath="$PROJECT_DIR$/_site/page/2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/你不知道的高性能Javascript(上)/index.html" afterPath="$PROJECT_DIR$/_site/你不知道的高性能Javascript(上)/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/状态机实战/index.html" afterPath="$PROJECT_DIR$/_site/状态机实战/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/玩转 JavaScript Callback函数/index.html" afterPath="$PROJECT_DIR$/_site/玩转 JavaScript Callback函数/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/玩转 JavaScript this指针/index.html" afterPath="$PROJECT_DIR$/_site/玩转 JavaScript this指针/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/me.html" afterPath="$PROJECT_DIR$/_site/me.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags.html" afterPath="$PROJECT_DIR$/_site/tags.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="yeahyangliu.github.io.iws" />
@@ -56,7 +69,7 @@
       <file leaf-file-name="sidebar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/sidebar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0357144" vertical-offset="0" max-vertical-offset="893">
+            <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="893">
               <caret line="3" column="31" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#h3#0;n#header#0;n#!!top" expanded="true" />
@@ -88,33 +101,30 @@
       <file leaf-file-name="2015-11-11-CSS玩转Position.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2015-11-11-CSS玩转Position.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="836">
-              <caret line="14" column="21" selection-start-line="13" selection-start-column="4" selection-end-line="14" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="836">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8292683" vertical-offset="0" max-vertical-offset="779">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="779">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LICENSE">
+      <file leaf-file-name="2016-01-29-JavaScript变量提升.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.17073171" vertical-offset="0" max-vertical-offset="1083">
+              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-            <state />
           </provider>
         </entry>
       </file>
@@ -176,6 +186,7 @@
         <option value="$PROJECT_DIR$/_posts/2015-11-11-CSS玩转Position.md" />
         <option value="$PROJECT_DIR$/_posts/2015-12-03-你不知道的高性能Javascript(上).md" />
         <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md" />
       </list>
     </option>
   </component>
@@ -477,7 +488,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3383405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35336193" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283767" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -519,17 +530,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1273">
@@ -799,7 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="171">
           <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,14 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="798">
           <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2015-11-11-CSS玩转Position.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="70" max-vertical-offset="836">
-          <caret line="14" column="21" selection-start-line="13" selection-start-column="4" selection-end-line="14" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -875,7 +866,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0357144" vertical-offset="0" max-vertical-offset="893">
+        <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="893">
           <caret line="3" column="31" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#p#0;n#h3#0;n#header#0;n#!!top" expanded="true" />
@@ -885,8 +876,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8292683" vertical-offset="0" max-vertical-offset="779">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="779">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2015-11-11-CSS玩转Position.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="836">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17073171" vertical-offset="0" max-vertical-offset="1083">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           <folding />
         </state>
       </provider>

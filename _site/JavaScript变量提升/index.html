@@ -5,7 +5,7 @@
 		<title>Game of Throne | Alex</title>
 
 	
-	<meta name="description" content="CSS中position的介绍和用法">
+	<meta name="description" content="JavaScript hoisting机制">
 	
 
 	<meta name="author" content="Alex Yang">
@@ -135,7 +135,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 <div class="col-sm-8 col-sm-offset-4" id="container">
   
 <div class="page-header">
-  <h1>CSS玩转Position </h1>
+  <h1>JavaScript变量和函数提升 </h1>
 </div>
 
 <article>
@@ -143,45 +143,54 @@ border: 3px solid #FFF; height:150px;width:150px"/>
   <div class="col-sm-10">
    <span class="post-date">
      
-     November 
-     11th,
+     January 
+     29th,
      
-     2015
+     2016
       
    </span>
     <div class="article_body" id="article_body">
-    <p><img src="/assets/image/css-position.jpg" alt="position" /></p>
+    <p><br />
+聊到变量和函数，我们不得不谈变量和函数的作用域，对于变量而言，我们知道的全局变量和局部变量。在JavaScript中，唯一能定义变量的作用域语块就是<code>函数</code>。所以我们会在函数内部使用闭包来创建局部变量，当然ES6提供了新的变量作用域块级作用域，更加优雅的解决了这一问题。
+如图我们可以清楚的知道局部变量和全局变量的区别。
+<img src="/assets/image/VariableScope.png" alt="pseudo" /></p>
 
-<p><br />
-    布局是前端开发必须要掌握的技能，我会详细介绍position的4种状态并且用实例演示如何使用他们。
-<br />
-    position的四种状态分别是：<code>static</code>， <code>relative</code>， <code>absolute</code>， <code>fixed</code>。下面我将分别介绍这四种属性
-    然后会使用实例来阐述介绍中的含义。</p>
+<p>既然我们知道了作用域的不同，那么我们看看下个代码中的变量如何取值</p>
 
-<h3 id="static">static</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;name variable&quot;</span><span class="p">;</span>
+   <span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
+     <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;name one&#39;</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="nx">test</span><span class="p">();</span></code></pre></div>
 
-<pre><code>    static是position的默认属性，他不会拥有任何其他属性，static的布局会根据html的默认布局进行排列。
-</code></pre>
+<p>上面代码的打印结果是<code>undefined</code>。test()方法中的name并没有读取全局变量name，而是在其函数作用域内声明的name。
+那么为什么没有打印“name one”呢？</p>
 
-<h3 id="relative">relative</h3>
+<p>我们来看看JavaScript解析器是如何阅读上面代码的吧</p>
 
-<pre><code>    relative和static属性表现基本一样，元素会在保留在文档流中，并且占有原来文档流的位置始终不变。
-    relative的特性是你可以给他添加四个属性top, left, right, bottom。例如top是使其距离它文档流的上边框的距离。
-    其他元素不会调整位置来弥补他移动带来的空缺，因为元素所在文档的位置没有变化。
-</code></pre>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;global variable&#39;</span><span class="p">;</span>
+   <span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
+     <span class="kd">var</span> <span class="nx">name</span><span class="p">;</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
+     <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;local one&#39;</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="nx">test</span><span class="p">();</span></code></pre></div>
 
-<h3 id="absolute">absolute</h3>
+<p>秘密被揭开的时候，各种魔术把戏都会变得很愚蠢。JavaScript引擎在进行解析的时候会对代码进行两轮处理。
+第一轮，初始化变量，第二轮，执行代码。如果你想知道具体细节，他会按如下步骤进行解析：</p>
 
-<pre><code>    absolute的定于必须要根据距离他最近的祖先元素中状态为positioned（fixed, relative）的元素进行定位。
-    使用这个属性会使元素脱离文档流，其他元素会来弥补他的移动带来的空缺，并且同样拥有top，left，right，bottom四个属性来调整位置。
-</code></pre>
+<ul>
+  <li>声明并初始化函数参数</li>
+  <li>声明局部变量，但不初始化他们，只是将变量提升到作用域最顶端</li>
+  <li>声明初始化函数声明（不初始化函数表达式）</li>
+</ul>
 
-<h3 id="fixed">fixed</h3>
+<h1 id="section">总结</h1>
+<p>这里我们可以获取到关于变量和函数提升的重要信息
+对于变量，变量提升发生在编译阶段，它把变量的声明提升至作用域的顶端，并不是提升到全局范围。
+对于函数声明，JS解析器会在预解析阶段优先读取函数声明的代码，以确保函数能够被引用到；而对于函数表达式，只有在执行到相应的语句时才进行解析。在实际中，具体表现在：当使用函数声明的形式来定义函数时，可将调用放在函数声明之前，而使用函数表达式，这样做的话会报错。</p>
 
-<pre><code>    fixed是指元素脱离文档流，并且位置相对视窗固定，这就意味着滚动页面不会影响该元素的位置和显示。他同样有四个属性进行调整他所相对视窗边距的位移。
-</code></pre>
-
-<p>如果你对我的描述感到困惑，不妨看我的一个示例，里面清晰简洁的使用了position这个属性。<a href="http://jsfiddle.net/Alex___Yang/f9pvsdsc/">如果你打不开，你就土了</a></p>
 
     </div>
 
@@ -207,8 +216,8 @@ border: 3px solid #FFF; height:150px;width:150px"/>
       
       
         <li>
-          <a href="http://yeahyangliu.github.io/tags.html#CSS-ref">
-          CSS <span>(2)</span>
+          <a href="http://yeahyangliu.github.io/tags.html#JavaScript-ref">
+          JavaScript <span>(5)</span>
           
           </a>
         </li>
@@ -223,7 +232,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
     <div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=CSS玩转Position"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=JavaScript变量和函数提升"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-weixin fa-lg"></i>
           Wechat
@@ -251,10 +260,10 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 
     <ul class="pager">
       
-      <li class="previous"><a href="http://yeahyangliu.github.io/Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0" title="Web前端开发概述">&larr; 上一篇</a></li>
+      <li class="previous"><a href="http://yeahyangliu.github.io/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E9%AB%98%E6%80%A7%E8%83%BDJavascript(%E4%B8%8A)" title="你不知道的高性能Javascript">&larr; 上一篇</a></li>
       
       
-      <li class="next"><a href="http://yeahyangliu.github.io/CSS%E7%8E%A9%E8%BD%AC%E4%BC%AA%E5%85%83%E7%B4%A0" title="CSS玩转伪元素">下一篇 &rarr;</a></li>
+      <li class="next disabled"><a>下一篇 &rarr;</a>
       
     </ul>
 
