@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/image/VariableScope.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories.html" afterPath="$PROJECT_DIR$/_site/categories.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/CSS玩转Position/index.html" afterPath="$PROJECT_DIR$/_site/CSS玩转Position/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/CSS玩转伪元素/index.html" afterPath="$PROJECT_DIR$/_site/CSS玩转伪元素/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/Guava带Java飞/index.html" afterPath="$PROJECT_DIR$/_site/Guava带Java飞/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/Web前端开发概述/index.html" afterPath="$PROJECT_DIR$/_site/Web前端开发概述/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/javascript-module-pattern/index.html" afterPath="$PROJECT_DIR$/_site/javascript-module-pattern/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/page/2/index.html" afterPath="$PROJECT_DIR$/_site/page/2/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/你不知道的高性能Javascript(上)/index.html" afterPath="$PROJECT_DIR$/_site/你不知道的高性能Javascript(上)/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/状态机实战/index.html" afterPath="$PROJECT_DIR$/_site/状态机实战/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/玩转 JavaScript Callback函数/index.html" afterPath="$PROJECT_DIR$/_site/玩转 JavaScript Callback函数/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/玩转 JavaScript this指针/index.html" afterPath="$PROJECT_DIR$/_site/玩转 JavaScript this指针/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/me.html" afterPath="$PROJECT_DIR$/_site/me.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags.html" afterPath="$PROJECT_DIR$/_site/tags.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md" afterPath="$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md" />
     </list>
     <ignored path="yeahyangliu.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -121,8 +105,8 @@
       <file leaf-file-name="2016-01-29-JavaScript变量提升.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17073171" vertical-offset="0" max-vertical-offset="1083">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.80487806" vertical-offset="285" max-vertical-offset="1083">
+              <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -892,8 +876,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17073171" vertical-offset="0" max-vertical-offset="1083">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.80487806" vertical-offset="285" max-vertical-offset="1083">
+          <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
           <folding />
         </state>
       </provider>
