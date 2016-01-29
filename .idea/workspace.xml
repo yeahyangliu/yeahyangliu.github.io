@@ -4,7 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/_posts/2015-11-12-CSS玩转伪元素.md" description="    div:before {&#10;        content: open-quote;&#10;    ..." line="20" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="" />
+    <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md" afterPath="$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md" />
+    </list>
     <ignored path="yeahyangliu.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -103,8 +105,8 @@
       <file leaf-file-name="2016-01-29-JavaScript变量提升.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80487806" vertical-offset="285" max-vertical-offset="1083">
-              <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.7804878" vertical-offset="285" max-vertical-offset="1102">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -874,8 +876,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80487806" vertical-offset="285" max-vertical-offset="1083">
-          <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.7804878" vertical-offset="285" max-vertical-offset="1102">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
