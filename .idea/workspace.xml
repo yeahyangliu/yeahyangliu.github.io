@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/_posts/2015-11-12-CSS玩转伪元素.md" description="    div:before {&#10;        content: open-quote;&#10;    ..." line="20" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md" afterPath="$PROJECT_DIR$/_posts/2016-01-29-JavaScript变量提升.md" />
-    </list>
+    <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="" />
     <ignored path="yeahyangliu.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
