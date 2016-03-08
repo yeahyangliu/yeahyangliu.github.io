@@ -156,14 +156,14 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 想必大家都知道，JavaScrip是全栈开发语言，浏览器，手机，服务器端都可以看到JS的身影。
 本文会分享一些高效的JavaScript的最佳实践，提高大家对JS的底层和实现原理的理解。</p>
 
-<h1 id="section">数据存储</h1>
+<h3 id="section">数据存储</h3>
 
 <p>计算机学科中有一个经典问题是通过改变数据存储的位置来获得最佳的读写性能，在JavaScript中，数据存储的位置会对代码性能产生重大影响。
  - 能使用{}创建对象就不要使用new Object，能使用[]创建数组就不要使用new Array。JS中字面量的访问速度要高于对象。
  - 变量在作用域链中的位置越深，访问所需实践越长。对于这种变量，可以通过缓存使用局部变量保存起来，减少对作用域链访问次数
  - 使用点表示法（object.name）和操作符（object[name]）操作并没有太多区别，只有Safari会有区别，点始终更快</p>
 
-<h1 id="section-1">循环</h1>
+<h3 id="section-1">循环</h3>
 
 <p>在JS中常见的循环有下面几种：</p>
 
@@ -176,7 +176,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 <p>毋庸质疑，第一种方式是原生的，性能消耗最低的，速度也最快。第二种方式for-in每次迭代都回产生更多的开销（局部变量），它的速度只有第一种的1/7
 第三种方式明显提供了更便利的循环方式，但是他的速度只有普通循环的1/8。所以可以根据自己项目情况，选择合适的循环方式。</p>
 
-<h1 id="section-2">事件委托</h1>
+<h3 id="section-2">事件委托</h3>
 
 <p>试想一下页面上每一个A标签添加一个事件，我们会不会给每一个标签都添加一个onClick呢。
 当页面中存在大量元素都需要绑定同一个事件处理的时候，这种情况可能会影响性能。每绑定一个事件都加重了页面或者是运行期间的负担。对于一个富前端的应用，交互重的页面上，过多的绑定会占用过多内存。
@@ -196,7 +196,7 @@ border: 3px solid #FFF; height:150px;width:150px"/>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">target</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span>
     <span class="p">}</span></code></pre></div>
 
-<h1 id="section-3">重绘与重排</h1>
+<h3 id="section-3">重绘与重排</h3>
 
 <p>浏览器下载完HTMl，CSS，JS后会生成两棵树：DOM树和渲染树。
 当Dom的几何属性发生变化时，比如Dom的宽高，或者颜色，position，浏览器需要重新计算元素的几何属性，并且重新构建渲染树，这个过程称之为重绘重排。</p>
@@ -212,13 +212,13 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">bodystyle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">;</span>
 <span class="nx">bodystyle</span><span class="p">.</span><span class="nx">cssText</span> <span class="s1">&#39;color:red;height:1000px;width:100%&#39;</span><span class="p">;</span></code></pre></div>
 
-<h1 id="javascript">JavaScript加载</h1>
+<h3 id="javascript">JavaScript加载</h3>
 
 <p>IE8，Firefox3.5，Chrome2都允许必行下载JavaScript文件。所以<code>&lt;script&gt;</code>不会阻塞其他标签下载。
 遗憾的是，JS下载过程依然会阻塞其他资源的下载，比如图片。尽管最新的浏览器通过允许并行下载提高了性能，但是脚本阻塞任然是一个问题。
 因此，推荐将所有的<code>&lt;script&gt;</code>标签放在<code>&lt;body&gt;</code>标签的底部，以尽量减少对整个页面渲染的影响，避免用户看到一片空白</p>
 
-<h1 id="js">JS文件高性能部署</h1>
+<h3 id="js">JS文件高性能部署</h3>
 
 <p>既然大家已经知道多个<code>&lt;script&gt;</code>标签会影响页面渲染速度，那么就不难理解“减少页面渲染所需的HTTP”是网站提速的一条经典法则。
 所以，在产品环境下合并所有的JS文件会减少请求数，从而加快页面渲染速度。
@@ -231,13 +231,13 @@ border: 3px solid #FFF; height:150px;width:150px"/>
 
 <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="s2">&quot;foobar&quot;</span><span class="p">;</span></code></pre></div>
 
-<h1 id="js-1">缓存JS文件</h1>
+<h3 id="js-1">缓存JS文件</h3>
 
 <p>缓存HTTP组件能极大提高网站回访的用户体验。Web服务器通过“Expires HTTP响应头”来告诉客户端一个资源应该缓存多长时间。当然，缓存也有自己的缺陷：
 当应用升级时，你需要确保用户下载到最新的静态内容。这个问题可以通过改变静态资源的文件名来解决。
 你可能在产品环境看到浏览器引用js<code>application-20151123201212.js</code>，这种就是以时间戳的方式保存新的JS文件，从而解决缓存不更新问题。</p>
 
-<h1 id="section-4">总结</h1>
+<h3 id="section-4">总结</h3>
 
 <p>当然，高效的JS不仅仅只有这些可以改进的地方，如果能够减少一些性能的损耗，我们就能更高效的使用JavaScript进行开发了。</p>
 
