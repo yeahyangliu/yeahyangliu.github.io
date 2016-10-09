@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去TWU当教练.md" afterPath="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去TWU当教练.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="yeahyangliu.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,8 +65,8 @@
       <file leaf-file-name="2016-10-07-我为什么要去TWU当教练.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-我为什么要去TWU当教练.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.340589" vertical-offset="76" max-vertical-offset="912">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.95134443" vertical-offset="473" max-vertical-offset="1330">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -855,8 +854,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-我为什么要去TWU当教练.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.340589" vertical-offset="76" max-vertical-offset="912">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.95134443" vertical-offset="473" max-vertical-offset="1330">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding />
         </state>
       </provider>
