@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md" afterPath="$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/如何给全球毕业生做入职培训/index.html" afterPath="$PROJECT_DIR$/_site/如何给全球毕业生做入职培训/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="yeahyangliu.github.io.iws" />
@@ -67,8 +66,8 @@
       <file leaf-file-name="2016-10-07-如何给全球毕业生做入职培训.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8514725" vertical-offset="646" max-vertical-offset="1444">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.87580025" vertical-offset="646" max-vertical-offset="1463">
+              <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -860,8 +859,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8514725" vertical-offset="646" max-vertical-offset="1444">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.87580025" vertical-offset="646" max-vertical-offset="1463">
+          <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
           <folding />
         </state>
       </provider>
