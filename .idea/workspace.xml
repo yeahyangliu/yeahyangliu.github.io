@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md" afterPath="$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/如何给全球毕业生做入职培训/index.html" afterPath="$PROJECT_DIR$/_site/如何给全球毕业生做入职培训/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md" afterPath="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md" />
     </list>
     <ignored path="yeahyangliu.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016-10-07-如何给全球毕业生做入职培训.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md">
+      <file leaf-file-name="2016-10-07-我为什么要去印度当教练.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.90268886" vertical-offset="720" max-vertical-offset="1558">
-              <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.8053777" vertical-offset="815" max-vertical-offset="1596">
+              <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -178,8 +176,8 @@
         <option value="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去TWU当教练.md" />
         <option value="$PROJECT_DIR$/_posts/2016-10-07-我在印度怎么培训新人.md" />
         <option value="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度培训新人.md" />
-        <option value="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md" />
         <option value="$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md" />
+        <option value="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md" />
       </list>
     </option>
   </component>
@@ -867,10 +865,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90268886" vertical-offset="720" max-vertical-offset="1558">
-          <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.8053777" vertical-offset="815" max-vertical-offset="1596">
+          <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
           <folding />
         </state>
       </provider>
