@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md" afterPath="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md" afterPath="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/我为什么要去印度当教练/index.html" afterPath="$PROJECT_DIR$/_site/我为什么要去印度当教练/index.html" />
     </list>
     <ignored path="yeahyangliu.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,8 +66,8 @@
       <file leaf-file-name="2016-10-07-我为什么要去印度当教练.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8053777" vertical-offset="815" max-vertical-offset="1596">
-              <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.4622279" vertical-offset="0" max-vertical-offset="1596">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -867,8 +868,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8053777" vertical-offset="815" max-vertical-offset="1596">
-          <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.4622279" vertical-offset="0" max-vertical-offset="1596">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
         </state>
       </provider>
