@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/我为什么要去印度培训新人/index.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度培训新人.md" afterPath="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories.html" afterPath="$PROJECT_DIR$/_site/categories.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/JavaScript变量提升/index.html" afterPath="$PROJECT_DIR$/_site/JavaScript变量提升/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags.html" afterPath="$PROJECT_DIR$/_site/tags.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md" afterPath="$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/我为什么要去印度当教练/index.html" afterPath="$PROJECT_DIR$/_site/我为什么要去印度当教练/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="yeahyangliu.github.io.iws" />
@@ -68,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016-10-07-我为什么要去印度当教练.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md">
+      <file leaf-file-name="2016-10-07-如何给全球毕业生做入职培训.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8540333" vertical-offset="587" max-vertical-offset="1368">
-              <caret line="66" column="89" selection-start-line="66" selection-start-column="89" selection-end-line="66" selection-end-column="89" />
+            <state vertical-scroll-proportion="0.072983354" vertical-offset="0" max-vertical-offset="1406">
+              <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -182,6 +178,8 @@
         <option value="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去TWU当教练.md" />
         <option value="$PROJECT_DIR$/_posts/2016-10-07-我在印度怎么培训新人.md" />
         <option value="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度培训新人.md" />
+        <option value="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md" />
+        <option value="$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md" />
       </list>
     </option>
   </component>
@@ -860,10 +858,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8540333" vertical-offset="587" max-vertical-offset="1368">
-          <caret line="66" column="89" selection-start-line="66" selection-start-column="89" selection-end-line="66" selection-end-column="89" />
+        <state vertical-scroll-proportion="0.072983354" vertical-offset="0" max-vertical-offset="1406">
+          <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
           <folding />
         </state>
       </provider>
