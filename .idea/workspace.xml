@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-10-07-why-I-go-to-india-to-be-a-trainer.md" afterPath="$PROJECT_DIR$/_posts/2016-10-07-why-I-go-to-india-to-be-a-trainer.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="yeahyangliu.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,8 +65,8 @@
       <file leaf-file-name="2016-10-07-why-I-go-to-india-to-be-a-trainer.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-why-I-go-to-india-to-be-a-trainer.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4878049" vertical-offset="931" max-vertical-offset="1767">
-              <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.381258" vertical-offset="786" max-vertical-offset="1805">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -868,8 +867,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-why-I-go-to-india-to-be-a-trainer.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4878049" vertical-offset="931" max-vertical-offset="1767">
-          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.381258" vertical-offset="786" max-vertical-offset="1805">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
