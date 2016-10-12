@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f70f5a8-7632-450d-b52d-17881b4d8bb2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-10-07-why-I-go-to-india-to-be-a-trainer.md" afterPath="$PROJECT_DIR$/_posts/2016-10-07-why-I-go-to-india-to-be-a-trainer.md" />
     </list>
     <ignored path="yeahyangliu.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80487806" vertical-offset="0" max-vertical-offset="779">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="779">
               <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
               <folding />
             </state>
@@ -62,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016-10-07-why-I-go-to-india-to-be-a-trainer.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2016-10-07-why-I-go-to-india-to-be-a-trainer.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-why-I-go-to-india-to-be-a-trainer.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1007" max-vertical-offset="1881">
-              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.73170733" vertical-offset="57" max-vertical-offset="1919">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -177,8 +177,8 @@
         <option value="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度培训新人.md" />
         <option value="$PROJECT_DIR$/_posts/2016-10-07-如何给全球毕业生做入职培训.md" />
         <option value="$PROJECT_DIR$/_posts/2016-10-07-我为什么要去印度当教练.md" />
-        <option value="$PROJECT_DIR$/_posts/2016-10-07-why-I-go-to-india-to-be-a-trainer.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_posts/2016-10-07-why-I-go-to-india-to-be-a-trainer.md" />
       </list>
     </option>
   </component>
@@ -857,18 +857,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-why-I-go-to-india-to-be-a-trainer.md">
+    <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1007" max-vertical-offset="1881">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="779">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
+    <entry file="file://$PROJECT_DIR$/_posts/2016-10-07-why-I-go-to-india-to-be-a-trainer.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80487806" vertical-offset="0" max-vertical-offset="779">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.73170733" vertical-offset="57" max-vertical-offset="1919">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
